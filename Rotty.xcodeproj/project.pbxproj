@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EB9F028E4361C00952E1E /* RottyApp.swift */; };
-		908EB9F328E4361C00952E1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EB9F228E4361C00952E1E /* ContentView.swift */; };
 		908EB9F528E4361E00952E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F428E4361E00952E1E /* Assets.xcassets */; };
 		908EB9F828E4361E00952E1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F728E4361E00952E1E /* Preview Assets.xcassets */; };
+		90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FC028E4372800496AD2 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		908EB9ED28E4361C00952E1E /* Rotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908EB9F028E4361C00952E1E /* RottyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottyApp.swift; sourceTree = "<group>"; };
-		908EB9F228E4361C00952E1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		908EB9F428E4361E00952E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		908EB9F728E4361E00952E1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90A80FC028E4372800496AD2 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				908EB9F028E4361C00952E1E /* RottyApp.swift */,
-				908EB9F228E4361C00952E1E /* ContentView.swift */,
+				90A80FC028E4372800496AD2 /* LaunchView.swift */,
 				908EB9F428E4361E00952E1E /* Assets.xcassets */,
 				908EB9F628E4361E00952E1E /* Preview Content */,
 			);
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908EB9F328E4361C00952E1E /* ContentView.swift in Sources */,
 				908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */,
+				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

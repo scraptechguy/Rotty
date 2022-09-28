@@ -12,6 +12,7 @@ struct RottyApp: App {
     var body: some Scene {
         WindowGroup {
             LaunchView()
+                .environmentObject(ContentModel())
         }
     }
 }

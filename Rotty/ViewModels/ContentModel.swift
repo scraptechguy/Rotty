@@ -10,6 +10,8 @@ import SwiftUI
 
 class ContentModel: ObservableObject {
     
+    // MARK: State vars
     
+    @AppStorage("onboardingShown") var onboardingShown = false
     
 }

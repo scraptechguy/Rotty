@@ -14,6 +14,7 @@
 		90A80FC528E43A1300496AD2 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FC428E43A1300496AD2 /* ContentModel.swift */; };
 		90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FC828E43A4100496AD2 /* HomeView.swift */; };
 		90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FCA28E43A5000496AD2 /* OnboardingView.swift */; };
+		90A80FCD28E6128000496AD2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FCC28E6128000496AD2 /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		90A80FC428E43A1300496AD2 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		90A80FC828E43A4100496AD2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		90A80FCA28E43A5000496AD2 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		90A80FCC28E6128000496AD2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				90A80FC828E43A4100496AD2 /* HomeView.swift */,
+				90A80FCC28E6128000496AD2 /* Camera.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */,
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,
+				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
 				90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */,
 				90A80FC528E43A1300496AD2 /* ContentModel.swift in Sources */,

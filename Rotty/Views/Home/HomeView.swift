@@ -17,6 +17,8 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 20) {
+                NavigationBar()
+                
                 Text("Home")
                     .font(.title)
                     .bold()
@@ -31,6 +33,8 @@ struct HomeView: View {
                     Text("to onboarding")
                         .foregroundColor(.secondary)
                 }
+                
+                Spacer()
             }
         }
     }

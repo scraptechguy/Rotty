@@ -16,28 +16,30 @@ struct HomeView: View {
             Color("Background")
                 .ignoresSafeArea()
             
-            VStack(spacing: 20) {
-                NavigationBar()
-                
-                Map()
-                    .frame(height: 600)
-                    .mask(
-                        RoundedRectangle(cornerRadius: 30)
-                    )
-                    .padding()
-                
-                HStack(spacing: 0) {
-                    Button(action: {
-                        model.onboardingShown = false
-                    }, label: {
-                        Text("Go back ")
-                    })
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 20) {
+                    NavigationBar()
                     
-                    Text("to onboarding")
-                        .foregroundColor(.secondary)
+                    Map()
+                        .frame(height: 600)
+                        .mask(
+                            RoundedRectangle(cornerRadius: 30)
+                        )
+                        .padding()
+                    
+                    HStack(spacing: 0) {
+                        Button(action: {
+                            model.onboardingShown = false
+                        }, label: {
+                            Text("Go back ")
+                        })
+                        
+                        Text("to onboarding")
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
             }
         }
     }

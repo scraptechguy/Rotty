@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var model: ContentModel
+    
     var body: some View {
-        Text("Home")
+        ZStack {
+            Color("Background")
+                .ignoresSafeArea()
+            
+            VStack(spacing: 20) {
+                Text("Home")
+                    .font(.title)
+                    .bold()
+                
+                HStack(spacing: 0) {
+                    Button(action: {
+                        model.onboardingShown = false
+                    }, label: {
+                        Text("Go back ")
+                    })
+                    
+                    Text("to onboarding")
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(ContentModel())
     }
 }

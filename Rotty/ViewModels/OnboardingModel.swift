@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct OnboardingModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct Intro: Identifiable {
+    
+    var id: String = UUID().uuidString
+    var imageName: String
+    var title: String
+    
 }
 
-struct OnboardingModel_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingModel()
-    }
-}
+var intros: [Intro] = [
+
+    .init(imageName: "rotty_mad", title: "Don't be a jerk"),
+    .init(imageName: "rotty_coolaf", title: "Be cool af"),
+
+]

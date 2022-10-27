@@ -43,7 +43,7 @@ struct AccountView: View {
                         ZStack {
                             Rectangle()
                                 .fill(Color("AccentColor"))
-                                .frame(width: .infinity, height: 220)
+                                .frame(height: 220)
                                 .mask(
                                     RoundedRectangle(cornerRadius: 30)
                                 )
@@ -67,7 +67,6 @@ struct AccountView: View {
                         ZStack {
                             Rectangle()
                                 .fill(.clear)
-                                .frame(width: .infinity)
                                 .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color("AccentColor"), lineWidth: 2))
                             
                             VStack(spacing: 10) {
@@ -99,7 +98,7 @@ struct AccountView: View {
                     ZStack {
                         Rectangle()
                             .fill(Color("AccentColor"))
-                            .frame(width: .infinity, height: 160)
+                            .frame(height: 160)
                             .mask(
                                 RoundedRectangle(cornerRadius: 30)
                             )

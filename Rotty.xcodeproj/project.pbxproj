@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903010FD290A61ED0026E714 /* OnboardingModel.swift */; };
 		908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EB9F028E4361C00952E1E /* RottyApp.swift */; };
 		908EB9F528E4361E00952E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F428E4361E00952E1E /* Assets.xcassets */; };
 		908EB9F828E4361E00952E1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F728E4361E00952E1E /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903010FD290A61ED0026E714 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		908EB9ED28E4361C00952E1E /* Rotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908EB9F028E4361C00952E1E /* RottyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottyApp.swift; sourceTree = "<group>"; };
 		908EB9F428E4361E00952E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				90A80FC428E43A1300496AD2 /* ContentModel.swift */,
+				903010FD290A61ED0026E714 /* OnboardingModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,
 				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
+				903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */,
 				90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */,
 				90A80FC528E43A1300496AD2 /* ContentModel.swift in Sources */,
 			);

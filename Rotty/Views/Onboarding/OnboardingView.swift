@@ -13,7 +13,8 @@ struct OnboardingView: View {
     
     @State var showOnboardingScreens: Bool = false
     @State var currentIndex: Int = 0
-    @State var showLogInorSignUp: Bool = false
+    @State var showLogIn: Bool = false
+    @State var showSignUp: Bool = false
     
     var body: some View {
         ZStack {
@@ -26,20 +27,35 @@ struct OnboardingView: View {
             
             NavigationBar()
             
-            LogInSignUpScreen()
+            SignUpScreen()
+            
+            LogInScreen()
         }.animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showOnboardingScreens)
-            .animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showLogInorSignUp)
+            .animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showLogIn)
+            .animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showSignUp)
     }
     
     @ViewBuilder
-    func LogInSignUpScreen() -> some View {
+    func SignUpScreen() -> some View {
         GeometryReader {
             let size = $0.size
             
             VStack {
                 Text("BAAAAAAAAAAAH")
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .offset(y: !showLogInorSignUp ? size.height : 0)
+                .offset(y: !showSignUp ? size.height : 0)
+        }.ignoresSafeArea()
+    }
+    
+    @ViewBuilder
+    func LogInScreen() -> some View {
+        GeometryReader {
+            let size = $0.size
+            
+            VStack {
+                Text("BAAAAAAAAAAAH")
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .offset(y: !showLogIn ? size.height : 0)
         }.ignoresSafeArea()
     }
     
@@ -88,7 +104,7 @@ struct OnboardingView: View {
                         .onTapGesture {
                             if currentIndex == intros.count {
                                 
-                                model.onboardingShown = true
+                                showSignUp = true
                                 
                             } else {
                                 
@@ -108,7 +124,7 @@ struct OnboardingView: View {
                             .foregroundColor(.secondary)
                         
                         Button(action: {
-                            showLogInorSignUp = true
+                            showLogIn = true
                         }, label: {
                             Text("Log in")
                                 .font(.system(size: 14))
@@ -174,7 +190,8 @@ struct OnboardingView: View {
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0 : 0.2).delay(currentIndex == index ? 0.1 : 0), value: currentIndex)
         }.offset(y: -30)
-            .offset(y: showLogInorSignUp ? -size.height : 0)
+            .offset(y: showLogIn ? -size.height : 0)
+            .offset(y: showSignUp ? -size.height : 0)
     }
     
     @ViewBuilder
@@ -183,7 +200,7 @@ struct OnboardingView: View {
         
         HStack {
             Button(action: {
-                if !showLogInorSignUp {
+                if !showLogIn && !showSignUp {
                     if currentIndex > 0 {
                         
                         currentIndex -= 1
@@ -194,7 +211,8 @@ struct OnboardingView: View {
                         
                     }
                 } else {
-                    showLogInorSignUp.toggle()
+                    showLogIn = false
+                    showSignUp = false
                 }
             }, label: {
                 Image(systemName: "chevron.left")

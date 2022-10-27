@@ -41,7 +41,7 @@ struct OnboardingView: View {
             let size = $0.size
             
             VStack {
-                Text("BAAAAAAAAAAAH")
+                Text("Sign up")
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .offset(y: !showSignUp ? size.height : 0)
         }.ignoresSafeArea()
@@ -53,7 +53,7 @@ struct OnboardingView: View {
             let size = $0.size
             
             VStack {
-                Text("BAAAAAAAAAAAH")
+                Text("Log in")
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .offset(y: !showLogIn ? size.height : 0)
         }.ignoresSafeArea()
@@ -114,6 +114,8 @@ struct OnboardingView: View {
                         }
                         .offset(y: screenIsLast ? -40 : -90)
                         .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
+                        .offset(y: showSignUp ? -size.height * 1.3 : 0)
+                        .offset(y: showLogIn ? -size.height * 1.3 : 0)
                 }
                 .overlay(alignment: .bottom) {
                     let screenIsLast = currentIndex == intros.count
@@ -132,6 +134,8 @@ struct OnboardingView: View {
                         })
                     }.offset(y: screenIsLast ? -12 : 100)
                         .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
+                        .offset(y: showSignUp ? -size.height * 1.3 : 0)
+                        .offset(y: showLogIn ? -size.height * 1.3 : 0)
                 }
                 .offset(y: showOnboardingScreens ? 0 : size.height)
         }

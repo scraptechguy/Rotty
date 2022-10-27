@@ -32,12 +32,12 @@ struct NavigationBar: View {
                          model.showingAccountView = true
                      }, label: {
                          Image(systemName: "person.circle")
-                             .foregroundColor(.white)
+                             .foregroundColor(Color("AccentColor"))
                              .font(.body.weight(.bold))
                              .frame(width: 30, height: 30)
                              .cornerRadius(10)
                              .padding(8)
-                             .background(Color("AccentColor"), in:
+                             .background(.thinMaterial, in:
                                  RoundedRectangle(cornerRadius: 18, style: .continuous)
                              )
                      }).sheet(isPresented: $model.showingAccountView) {AccountView()}

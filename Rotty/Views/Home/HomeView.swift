@@ -19,9 +19,12 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 NavigationBar()
                 
-                Text("Home")
-                    .font(.title)
-                    .bold()
+                Map()
+                    .frame(height: 600)
+                    .mask(
+                        RoundedRectangle(cornerRadius: 30)
+                    )
+                    .padding()
                 
                 HStack(spacing: 0) {
                     Button(action: {

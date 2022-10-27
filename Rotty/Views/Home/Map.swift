@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Map.swift
 //  Rotty
 //
 //  Created by Rostislav Brož on 10/27/22.

@@ -111,6 +111,7 @@ struct OnboardingView: View {
         
         VStack(spacing: 10) {
             Text(intro.title)
+                .bold()
                 .font(.system(size: 28))
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0 : 0.2).delay(currentIndex == index ? 0.2 : 0), value: currentIndex)
@@ -143,7 +144,8 @@ struct OnboardingView: View {
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0.2 : 0).delay(currentIndex == index ? 0.1 : 0), value: currentIndex)
             
-            Text("Welcome")
+            Text("And recycle!")
+                .bold()
                 .font(.system(size: 28))
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0 : 0.2).delay(currentIndex == index ? 0.2 : 0), value: currentIndex)
@@ -203,10 +205,10 @@ struct OnboardingView: View {
             VStack(spacing: 10) {
                 Image("rotty_happy")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: size.width, height: size.height / 2)
                 
-                Text("Heading 1")
+                Text("Rotty says hi!")
                     .bold()
                     .font(.largeTitle)
                 

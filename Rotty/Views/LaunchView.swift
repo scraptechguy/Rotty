@@ -18,11 +18,7 @@ struct LaunchView: View {
             
         } else {
             
-            Button(action: {
-                model.onboardingShown = true
-            }, label: {
-               Text("Next")
-            })
+            OnboardingView()
             
         }
     }

@@ -95,7 +95,7 @@ struct OnboardingView: View {
                     .frame(height: 20)
                 
                 Button(action: {
-                    status = "...missing fields"
+                    model.onboardingShown = true
                 }, label: {
                     Image(systemName: "chevron.right")
                         .font(.title3)

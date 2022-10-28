@@ -57,6 +57,7 @@ struct HomeView: View {
                         
                         Text("Anicka")
                             .font(.title3)
+                            .foregroundColor(Color("Font"))
                         
                         HStack(spacing: 0) {
                             Button(action: {
@@ -67,6 +68,7 @@ struct HomeView: View {
                             })
                             
                             Text(" Level 6")
+                                .foregroundColor(Color("Font"))
                         }
                     }.opacity(showViews[0] ? 1 : 0)
                         .offset(y: showViews[0] ? 0 : 200)
@@ -85,22 +87,27 @@ struct HomeView: View {
                                         .foregroundColor(Color("AccentColor"))
                                     
                                     Text("Notifications")
+                                        .foregroundColor(Color("Font"))
                                 }
                                     
                                 Divider()
                                 
                                 Text("Today")
                                     .font(.headline)
+                                    .foregroundColor(Color("Font"))
                                 
                                 Text("Lorem ipsum dolor sit amet, consectetur")
                                     .font(.footnote)
+                                    .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
                                 
                                 Text("25. 5.")
                                     .font(.headline)
+                                    .foregroundColor(Color("Font"))
                                 
                                 Text("Lorem ipsum dolor sit amet, consectetur")
                                     .font(.footnote)
+                                    .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
                             }.padding(.horizontal)
                         }.frame(maxWidth: .infinity)
@@ -311,22 +318,27 @@ struct HomeView: View {
                                         .foregroundColor(Color("AccentColor"))
                                     
                                     Text("Notifications")
+                                        .foregroundColor(Color("Font"))
                                 }
                                 
                                 Divider()
                                 
                                 Text("Today")
                                     .font(.headline)
+                                    .foregroundColor(Color("Font"))
                                 
                                 Text("Lorem ipsum dolor sit amet, consectetur")
                                     .font(.footnote)
+                                    .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
                                 
                                 Text("25. 5.")
                                     .font(.headline)
+                                    .foregroundColor(Color("Font"))
                                 
                                 Text("Lorem ipsum dolor sit amet, consectetur")
                                     .font(.footnote)
+                                    .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
                             }.padding(.horizontal)
                         }.frame(maxWidth: .infinity)

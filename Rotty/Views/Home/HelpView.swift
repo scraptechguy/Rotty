@@ -74,7 +74,7 @@ struct HelpView: View {
                 Spacer()
                 
                 Button(action: {
-                    
+                    HomeView().showingHelpView = false
                 }, label: {
                     Image(systemName: "multiply")
                         .resizable()
@@ -89,7 +89,7 @@ struct HelpView: View {
                         .padding(.trailing, 15)
                 })
             }.padding(.leading, 15)
-                .padding(.top, 10)
+                .padding(.top, 15)
                 .frame(maxHeight: .infinity, alignment: .top)
         }
     }

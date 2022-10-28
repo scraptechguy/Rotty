@@ -14,7 +14,5 @@ class ContentModel: ObservableObject {
     
     // Stored as @State var for testing purposes
     @AppStorage("onboardingShown") var onboardingShown = false
-
-    @State var showingAccountView: Bool = false
     
 }

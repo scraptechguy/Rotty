@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
     
+    @State var showingHelpView = false
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -23,7 +25,7 @@ struct HomeView: View {
                             Spacer()
                             
                             Button(action: {
-                                
+                                showingHelpView = true
                             }, label: {
                                 Image(systemName: "questionmark")
                                     .resizable()
@@ -36,7 +38,7 @@ struct HomeView: View {
                                             .fill(Color("AccentColor"))
                                     }
                                     .padding(.trailing, 15)
-                            })
+                            }).sheet(isPresented: $showingHelpView) {HelpView()}
                         }
                         
                         Spacer()

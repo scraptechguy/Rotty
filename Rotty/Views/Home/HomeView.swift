@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     
     @State var showingHelpView = false
+    @State var showViews: [Bool] = Array(repeating: false, count: 8)
     
     var body: some View {
         ZStack {
@@ -44,26 +45,29 @@ struct HomeView: View {
                         Spacer()
                     }
                     
-                    Image("Ancaaaa")
-                        .resizable()
-                        .frame(width: 90, height: 90)
-                        .clipShape(Circle())
-                        .padding(5)
-                        .overlay(Circle().stroke(Color("AccentColor"), style: StrokeStyle(lineWidth: 2, dash: [5, 7])))
-                    
-                    Text("Anicka")
-                        .font(.title3)
-                    
-                    HStack(spacing: 0) {
-                        Button(action: {
-                            
-                        }, label: {
-                            Text("Recycling knight")
-                                .font(.headline)
-                        })
+                    VStack {
+                        Image("Ancaaaa")
+                            .resizable()
+                            .frame(width: 90, height: 90)
+                            .clipShape(Circle())
+                            .padding(5)
+                            .overlay(Circle().stroke(Color("AccentColor"), style: StrokeStyle(lineWidth: 2, dash: [5, 7])))
                         
-                        Text(" Level 6")
-                    }
+                        Text("Anicka")
+                            .font(.title3)
+                        
+                        HStack(spacing: 0) {
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Recycling knight")
+                                    .font(.headline)
+                            })
+                            
+                            Text(" Level 6")
+                        }
+                    }.opacity(showViews[0] ? 1 : 0)
+                        .offset(y: showViews[0] ? 0 : 200)
                     
                     HStack {
                         ZStack {
@@ -94,6 +98,8 @@ struct HomeView: View {
                                     .multilineTextAlignment(.center)
                             }.padding(.horizontal)
                         }.frame(maxWidth: .infinity)
+                            .opacity(showViews[1] ? 1 : 0)
+                                .offset(y: showViews[1] ? 0 : 230)
                         
                         VStack {
                             ZStack {
@@ -118,6 +124,8 @@ struct HomeView: View {
                                         .multilineTextAlignment(.center)
                                 }.foregroundColor(.white)
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .opacity(showViews[2] ? 1 : 0)
+                                    .offset(y: showViews[2] ? 0 : 230)
                             
                             HStack {
                                 Button(action: {
@@ -152,6 +160,8 @@ struct HomeView: View {
                                     }
                                 })
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .opacity(showViews[3] ? 1 : 0)
+                                    .offset(y: showViews[3] ? 0 : 230)
                         }.frame(maxWidth: .infinity)
                     }.frame(height: 220)
                         .padding(.top, 25)
@@ -164,6 +174,8 @@ struct HomeView: View {
                         )
                         .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color("AccentColor"), lineWidth: 2))
                         .padding(.horizontal)
+                        .opacity(showViews[4] ? 1 : 0)
+                        .offset(y: showViews[4] ? 0 : 250)
                     
                     ZStack {
                         Rectangle()
@@ -203,6 +215,8 @@ struct HomeView: View {
                             }
                         }.foregroundColor(.white)
                     }.padding(.horizontal)
+                        .opacity(showViews[5] ? 1 : 0)
+                            .offset(y: showViews[5] ? 0 : 280)
                     
                     HStack {
                         VStack {
@@ -228,6 +242,8 @@ struct HomeView: View {
                                         .multilineTextAlignment(.center)
                                 }.foregroundColor(.white)
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .opacity(showViews[6] ? 1 : 0)
+                                    .offset(y: showViews[6] ? 0 : 280)
                             
                             HStack {
                                 Button(action: {
@@ -262,6 +278,8 @@ struct HomeView: View {
                                     }
                                 })
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .opacity(showViews[7] ? 1 : 0)
+                                    .offset(y: showViews[7] ? 0 : 280)
                         }.frame(maxWidth: .infinity)
                         
                         ZStack {
@@ -317,6 +335,40 @@ struct HomeView: View {
             }.refreshable {
                 
             }
+        }.onAppear(perform: animateViews)
+    }
+    
+    func animateViews() {
+        withAnimation(.easeInOut) {
+            showViews[0] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.1)) {
+            showViews[1] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.15)) {
+            showViews[2] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.2)) {
+            showViews[3] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.3)) {
+            showViews[4] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.35)) {
+            showViews[5] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.4)) {
+            showViews[6] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.45)) {
+            showViews[7] = true
         }
     }
 }

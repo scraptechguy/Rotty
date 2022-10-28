@@ -13,6 +13,7 @@ struct HomeView: View {
     
     @State var showingHelpView = false
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
+    @State var isDarkMode = false
     
     var body: some View {
         ZStack {
@@ -275,20 +276,6 @@ struct HomeView: View {
                                     
                                 }, label: {
                                     VStack {
-                                        Image(systemName: "cloud")
-                                            .padding()
-                                            .frame(width: 80, height: 80)
-                                            .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
-                                        
-                                        Text("Github")
-                                            .font(.footnote)
-                                    }
-                                })
-                                
-                                Button(action: {
-                                    
-                                }, label: {
-                                    VStack {
                                         Image(systemName: "camera")
                                             .foregroundColor(.white)
                                             .padding()
@@ -299,6 +286,22 @@ struct HomeView: View {
                                             }
                                         
                                         Text("Camera")
+                                            .font(.footnote)
+                                    }
+                                })
+                                
+                                Button(action: {
+                                    withAnimation {
+                                        isDarkMode.toggle()
+                                    }
+                                }, label: {
+                                    VStack {
+                                        Image(systemName: isDarkMode ? "moon" : "sun.max")
+                                            .padding()
+                                            .frame(width: 80, height: 80)
+                                            .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
+                                        
+                                        Text("Github")
                                             .font(.footnote)
                                     }
                                 })

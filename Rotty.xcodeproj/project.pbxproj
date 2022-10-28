@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903010FD290A61ED0026E714 /* OnboardingModel.swift */; };
 		90301107290ADC820026E714 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90301106290ADC820026E714 /* Map.swift */; };
+		90301109290C17450026E714 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90301108290C17450026E714 /* HelpView.swift */; };
 		908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EB9F028E4361C00952E1E /* RottyApp.swift */; };
 		908EB9F528E4361E00952E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F428E4361E00952E1E /* Assets.xcassets */; };
 		908EB9F828E4361E00952E1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F728E4361E00952E1E /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		903010FD290A61ED0026E714 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		90301106290ADC820026E714 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		90301108290C17450026E714 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		908EB9ED28E4361C00952E1E /* Rotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908EB9F028E4361C00952E1E /* RottyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottyApp.swift; sourceTree = "<group>"; };
 		908EB9F428E4361E00952E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				90A80FC828E43A4100496AD2 /* HomeView.swift */,
 				90A80FCC28E6128000496AD2 /* Camera.swift */,
 				90301106290ADC820026E714 /* Map.swift */,
+				90301108290C17450026E714 /* HelpView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,
 				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
+				90301109290C17450026E714 /* HelpView.swift in Sources */,
 				903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */,
 				90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */,
 				90301107290ADC820026E714 /* Map.swift in Sources */,

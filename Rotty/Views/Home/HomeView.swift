@@ -278,8 +278,6 @@ struct HomeView: View {
                                     }
                                 })
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .opacity(showViews[7] ? 1 : 0)
-                                    .offset(y: showViews[7] ? 0 : 280)
                         }.frame(maxWidth: .infinity)
                         
                         ZStack {
@@ -310,6 +308,8 @@ struct HomeView: View {
                                     .multilineTextAlignment(.center)
                             }.padding(.horizontal)
                         }.frame(maxWidth: .infinity)
+                            .opacity(showViews[7] ? 1 : 0)
+                                .offset(y: showViews[7] ? 0 : 280)
                     }.frame(height: 220)
                         .padding(.horizontal)
                     

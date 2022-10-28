@@ -15,6 +15,8 @@ struct OnboardingView: View {
     @State var currentIndex: Int = 0
     @State var showLogIn: Bool = false
     @State var showSignUp: Bool = false
+    @State var email = ""
+    @State var password = ""
     
     var body: some View {
         ZStack {
@@ -54,7 +56,54 @@ struct OnboardingView: View {
             
             VStack {
                 Text("Log in")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("Font"))
+                    .padding(.bottom, 5)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Email")
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    TextField("anna.surovkova@outlook.com", text: $email)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Password")
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    SecureField("mypassword123", text: $password)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
+                Button(action: {
+                    model.onboardingShown = true
+                }, label: {
+                    Text("Forgot password?")
+                        .font(.footnote)
+                }).frame(maxWidth: .infinity, alignment: .trailing)
+                
+                Image(systemName: "chevron.right")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(width: 55, height: 55)
+                    .background {
+                        RoundedRectangle(cornerRadius: 30, style: .circular)
+                            .fill(Color("AccentColor"))
+                    }
+                    .padding(.top, 80)
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .padding()
                 .offset(y: !showLogIn ? size.height : 0)
         }.ignoresSafeArea()
     }

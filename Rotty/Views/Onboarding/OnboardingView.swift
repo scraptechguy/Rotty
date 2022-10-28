@@ -107,7 +107,7 @@ struct OnboardingView: View {
                                 .fill(Color("AccentColor"))
                         }
                         .padding(.top, 70)
-                })
+                }).offset(y: !showSignUp ? size.height : 0)
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .padding()
                 .offset(y: !showSignUp ? size.height : 0)
@@ -170,7 +170,7 @@ struct OnboardingView: View {
                                 .fill(Color("AccentColor"))
                         }
                         .padding(.top, 80)
-                })
+                }).offset(y: !showLogIn ? size.height : 0)
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .padding()
                 .offset(y: !showLogIn ? size.height : 0)

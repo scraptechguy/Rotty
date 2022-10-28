@@ -202,6 +202,97 @@ struct HomeView: View {
                         }.foregroundColor(.white)
                     }.padding(.horizontal)
                     
+                    HStack {
+                        VStack {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color("AccentColor"))
+                                    .mask(
+                                        RoundedRectangle(cornerRadius: 30)
+                                    )
+                                
+                                HStack(spacing: 10) {
+                                    VStack {
+                                        Image(systemName: "chart.bar")
+                                            .resizable()
+                                            .frame(width: 35, height: 30)
+                                        
+                                        Text("6 kg")
+                                            .bold()
+                                            .font(.title2)
+                                    }
+                                    
+                                    Text("of waste\nsaved")
+                                        .multilineTextAlignment(.center)
+                                }.foregroundColor(.white)
+                            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                            
+                            HStack {
+                                Button(action: {
+                                    
+                                }, label: {
+                                    VStack {
+                                        Image(systemName: "cloud")
+                                            .padding()
+                                            .frame(width: 80, height: 80)
+                                            .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
+                                        
+                                        Text("Github")
+                                            .font(.footnote)
+                                    }
+                                })
+                                
+                                Button(action: {
+                                    
+                                }, label: {
+                                    VStack {
+                                        Image(systemName: "camera")
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .frame(width: 80, height: 80)
+                                            .background {
+                                                RoundedRectangle(cornerRadius: 28)
+                                                    .fill(Color("AccentColor"))
+                                            }
+                                        
+                                        Text("Camera")
+                                            .font(.footnote)
+                                    }
+                                })
+                            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        }.frame(maxWidth: .infinity)
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(.clear)
+                                .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color("AccentColor"), lineWidth: 2))
+                            
+                            VStack(spacing: 10) {
+                                HStack {
+                                    Image(systemName: "bell")
+                                        .foregroundColor(Color("AccentColor"))
+                                    
+                                    Text("Notifications")
+                                }.padding(.bottom, 10)
+                                
+                                Text("Today")
+                                    .font(.headline)
+                                
+                                Text("Lorem ipsum dolor sit amet, consectetur")
+                                    .font(.footnote)
+                                    .multilineTextAlignment(.center)
+                                
+                                Text("25. 5.")
+                                    .font(.headline)
+                                
+                                Text("Lorem ipsum dolor sit amet, consectetur")
+                                    .font(.footnote)
+                                    .multilineTextAlignment(.center)
+                            }.padding(.horizontal)
+                        }.frame(maxWidth: .infinity)
+                    }.frame(height: 220)
+                        .padding(.horizontal)
+                    
                     HStack(spacing: 0) {
                         Button(action: {
                             model.onboardingShown = false

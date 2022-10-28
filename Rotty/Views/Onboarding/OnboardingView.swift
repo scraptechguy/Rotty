@@ -151,22 +151,26 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 Button(action: {
-                    model.onboardingShown = true
+                    
                 }, label: {
                     Text("Forgot password?")
                         .font(.footnote)
                 }).frame(maxWidth: .infinity, alignment: .trailing)
                 
-                Image(systemName: "chevron.right")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 55, height: 55)
-                    .background {
-                        RoundedRectangle(cornerRadius: 30, style: .circular)
-                            .fill(Color("AccentColor"))
-                    }
-                    .padding(.top, 80)
+                Button(action: {
+                    model.onboardingShown = true
+                }, label: {
+                    Image(systemName: "chevron.right")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 55, height: 55)
+                        .background {
+                            RoundedRectangle(cornerRadius: 30, style: .circular)
+                                .fill(Color("AccentColor"))
+                        }
+                        .padding(.top, 80)
+                })
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 .padding()
                 .offset(y: !showLogIn ? size.height : 0)

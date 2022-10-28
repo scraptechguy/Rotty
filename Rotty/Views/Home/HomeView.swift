@@ -191,7 +191,7 @@ struct HomeView: View {
                                         
                                     }, label: {
                                         Text("My missions")
-                                            .foregroundColor(Color("Font"))
+                                            .foregroundColor(.black)
                                             .padding(9)
                                             .background {
                                                 RoundedRectangle(cornerRadius: 30)

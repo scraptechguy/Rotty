@@ -85,7 +85,9 @@ struct HomeView: View {
                                         .foregroundColor(Color("AccentColor"))
                                     
                                     Text("Notifications")
-                                }.padding(.bottom, 10)
+                                }
+                                    
+                                Divider()
                                 
                                 Text("Today")
                                     .font(.headline)
@@ -309,7 +311,9 @@ struct HomeView: View {
                                         .foregroundColor(Color("AccentColor"))
                                     
                                     Text("Notifications")
-                                }.padding(.bottom, 10)
+                                }
+                                
+                                Divider()
                                 
                                 Text("Today")
                                     .font(.headline)

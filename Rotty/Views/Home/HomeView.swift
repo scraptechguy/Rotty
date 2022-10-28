@@ -45,6 +45,8 @@ struct HomeView: View {
                         Spacer()
                     }
                     
+                    // MARK: - User profile
+                    
                     VStack {
                         Image("Ancaaaa")
                             .resizable()
@@ -68,6 +70,8 @@ struct HomeView: View {
                         }
                     }.opacity(showViews[0] ? 1 : 0)
                         .offset(y: showViews[0] ? 0 : 200)
+                    
+                    // MARK: - Notifications
                     
                     HStack {
                         ZStack {
@@ -101,6 +105,8 @@ struct HomeView: View {
                             .opacity(showViews[1] ? 1 : 0)
                                 .offset(y: showViews[1] ? 0 : 230)
                         
+                        // MARK: - Waste saved
+                        
                         VStack {
                             ZStack {
                                 Rectangle()
@@ -126,6 +132,8 @@ struct HomeView: View {
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .opacity(showViews[2] ? 1 : 0)
                                     .offset(y: showViews[2] ? 0 : 230)
+                            
+                            // MARK: - Buttons
                             
                             HStack {
                                 Button(action: {
@@ -167,6 +175,8 @@ struct HomeView: View {
                         .padding(.top, 25)
                         .padding(.horizontal)
                     
+                    // MARK: - Map
+                    
                     Map()
                         .frame(height: 160)
                         .mask(
@@ -176,6 +186,8 @@ struct HomeView: View {
                         .padding(.horizontal)
                         .opacity(showViews[4] ? 1 : 0)
                         .offset(y: showViews[4] ? 0 : 250)
+                    
+                    // MARK: - Current level
                     
                     ZStack {
                         Rectangle()
@@ -218,6 +230,8 @@ struct HomeView: View {
                         .opacity(showViews[5] ? 1 : 0)
                             .offset(y: showViews[5] ? 0 : 280)
                     
+                    // MARK: - Waste saved
+                    
                     HStack {
                         VStack {
                             ZStack {
@@ -244,6 +258,8 @@ struct HomeView: View {
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .opacity(showViews[6] ? 1 : 0)
                                     .offset(y: showViews[6] ? 0 : 280)
+                            
+                            // MARK: - Buttons
                             
                             HStack {
                                 Button(action: {
@@ -279,6 +295,8 @@ struct HomeView: View {
                                 })
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         }.frame(maxWidth: .infinity)
+                        
+                        // MARK: - Notifications
                         
                         ZStack {
                             Rectangle()

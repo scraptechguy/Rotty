@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903010FD290A61ED0026E714 /* OnboardingModel.swift */; };
-		90301100290A9FE60026E714 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903010FF290A9FE60026E714 /* NavigationBar.swift */; };
-		90301102290AA0C70026E714 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90301101290AA0C70026E714 /* AccountView.swift */; };
-		90301105290AA1150026E714 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90301104290AA1150026E714 /* AnimatableFontModifier.swift */; };
 		90301107290ADC820026E714 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90301106290ADC820026E714 /* Map.swift */; };
 		908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908EB9F028E4361C00952E1E /* RottyApp.swift */; };
 		908EB9F528E4361E00952E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908EB9F428E4361E00952E1E /* Assets.xcassets */; };
@@ -25,9 +22,6 @@
 
 /* Begin PBXFileReference section */
 		903010FD290A61ED0026E714 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
-		903010FF290A9FE60026E714 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		90301101290AA0C70026E714 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		90301104290AA1150026E714 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		90301106290ADC820026E714 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		908EB9ED28E4361C00952E1E /* Rotty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908EB9F028E4361C00952E1E /* RottyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottyApp.swift; sourceTree = "<group>"; };
@@ -52,14 +46,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90301103290AA0F10026E714 /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				90301104290AA1150026E714 /* AnimatableFontModifier.swift */,
-			);
-			path = Styles;
-			sourceTree = "<group>";
-		};
 		908EB9E428E4361C00952E1E = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				908EB9F028E4361C00952E1E /* RottyApp.swift */,
-				90301103290AA0F10026E714 /* Styles */,
 				90A80FC328E43A0500496AD2 /* Views */,
 				90A80FC228E439FD00496AD2 /* ViewModels */,
 				908EB9F428E4361E00952E1E /* Assets.xcassets */,
@@ -121,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				90A80FC828E43A4100496AD2 /* HomeView.swift */,
-				903010FF290A9FE60026E714 /* NavigationBar.swift */,
-				90301101290AA0C70026E714 /* AccountView.swift */,
 				90A80FCC28E6128000496AD2 /* Camera.swift */,
 				90301106290ADC820026E714 /* Map.swift */,
 			);
@@ -211,11 +194,8 @@
 				908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */,
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,
 				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
-				90301105290AA1150026E714 /* AnimatableFontModifier.swift in Sources */,
-				90301100290A9FE60026E714 /* NavigationBar.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
 				903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */,
-				90301102290AA0C70026E714 /* AccountView.swift in Sources */,
 				90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */,
 				90301107290ADC820026E714 /* Map.swift in Sources */,
 				90A80FC528E43A1300496AD2 /* ContentModel.swift in Sources */,

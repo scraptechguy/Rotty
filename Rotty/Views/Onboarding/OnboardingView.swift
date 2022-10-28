@@ -12,11 +12,14 @@ struct OnboardingView: View {
     @EnvironmentObject var model: ContentModel
     
     @State var showOnboardingScreens: Bool = false
-    @State var currentIndex: Int = 0
     @State var showLogIn: Bool = false
     @State var showSignUp: Bool = false
+    @State var currentIndex: Int = 0
+    
     @State var email = ""
     @State var password = ""
+    @State var newPassword = ""
+    @State var status = ""
     
     var body: some View {
         ZStack {
@@ -44,7 +47,69 @@ struct OnboardingView: View {
             
             VStack {
                 Text("Sign up")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("Font"))
+                    .padding(.bottom, 5)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Email")
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    TextField("anna.surovkova@outlook.com", text: $email)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Password")
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    SecureField("mypassword123", text: $password)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Reenter password")
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                    
+                    SecureField("mypassword123", text: $password)
+                        .font(.system(size: 20, weight: .semibold))
+                        .foregroundColor(.secondary)
+                    
+                    Divider()
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text(status)
+                    .font(.footnote)
+                    .foregroundColor(Color("AccentColor"))
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .frame(height: 20)
+                
+                Button(action: {
+                    status = "...missing fields"
+                }, label: {
+                    Image(systemName: "chevron.right")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 55, height: 55)
+                        .background {
+                            RoundedRectangle(cornerRadius: 30, style: .circular)
+                                .fill(Color("AccentColor"))
+                        }
+                        .padding(.top, 70)
+                })
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .padding()
                 .offset(y: !showSignUp ? size.height : 0)
         }.ignoresSafeArea()
     }

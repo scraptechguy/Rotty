@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var showingHelpView = false
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     @State var isDarkMode = false
+    @State var isInEnglish = true
     
     var body: some View {
         ZStack {
@@ -273,10 +274,12 @@ struct HomeView: View {
                             
                             HStack {
                                 Button(action: {
-                                    
+                                    withAnimation {
+                                        isInEnglish.toggle()
+                                    }
                                 }, label: {
                                     VStack {
-                                        Image(systemName: "camera")
+                                        Image(systemName: isInEnglish ? "globe.americas" : "house")
                                             .foregroundColor(.white)
                                             .padding()
                                             .frame(width: 80, height: 80)
@@ -285,7 +288,7 @@ struct HomeView: View {
                                                     .fill(Color("AccentColor"))
                                             }
                                         
-                                        Text("Camera")
+                                        Text(isInEnglish ? "English" : "Čeština")
                                             .font(.footnote)
                                     }
                                 })
@@ -296,12 +299,12 @@ struct HomeView: View {
                                     }
                                 }, label: {
                                     VStack {
-                                        Image(systemName: isDarkMode ? "moon" : "sun.max")
+                                        Image(systemName: isDarkMode ? "moon.fill" : "sun.max.fill")
                                             .padding()
                                             .frame(width: 80, height: 80)
                                             .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
                                         
-                                        Text("Github")
+                                        Text(isDarkMode ? "Dark" : "Light")
                                             .font(.footnote)
                                     }
                                 })

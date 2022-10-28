@@ -147,9 +147,7 @@ struct HomeView: View {
                             // MARK: - Buttons
                             
                             HStack {
-                                Button(action: {
-                                    
-                                }, label: {
+                                Link(destination: URL(string: "https://github.com/scraptechguy/Rotty")!) {
                                     VStack {
                                         Image(systemName: "cloud")
                                             .padding()
@@ -159,7 +157,7 @@ struct HomeView: View {
                                         Text("Github")
                                             .font(.footnote)
                                     }
-                                })
+                                }
                                 
                                 Button(action: {
                                     

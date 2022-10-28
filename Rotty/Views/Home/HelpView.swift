@@ -91,6 +91,12 @@ struct HelpView: View {
             }.padding(.leading, 15)
                 .padding(.top, 15)
                 .frame(maxHeight: .infinity, alignment: .top)
+            
+            Text("Help")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.top, 15)
+                .frame(maxHeight: .infinity, alignment: .top)
         }
     }
 }

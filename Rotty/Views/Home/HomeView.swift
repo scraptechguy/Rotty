@@ -355,7 +355,20 @@ struct HomeView: View {
                     }
                 }
             }.refreshable {
+                withAnimation {
+                    showViews[0] = false
+                    showViews[1] = false
+                    showViews[2] = false
+                    showViews[3] = false
+                    showViews[4] = false
+                    showViews[5] = false
+                    showViews[6] = false
+                    showViews[7] = false
+                }
                 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    animateViews()
+                }
             }
         }.onAppear(perform: animateViews)
     }

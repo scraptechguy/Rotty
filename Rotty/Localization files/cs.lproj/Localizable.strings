@@ -36,3 +36,8 @@
 "signUpPassword" = "Heslo"
 "signUpReenterPassword" = "Heslo znovu"
 
+// MARK: - Log in
+
+"logInHeading" = "Přihlášení"
+"logInPassword" = "Heslo"
+"logInForgot" = "Zapomenuté heslo?"

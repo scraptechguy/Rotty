@@ -36,3 +36,8 @@
 "signUpPassword" = "Password"
 "signUpReenterPassword" = "Reenter password"
 
+// MARK: - Log in
+
+"logInHeading" = "Log in"
+"logInPassword" = "Password"
+"logInForgot" = "Forgot password?"

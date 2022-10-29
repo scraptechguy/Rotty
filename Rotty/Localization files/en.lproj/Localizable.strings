@@ -61,3 +61,11 @@
 "notificationsToday" = "Today";
 "notificationsBefore" = "Before";
 
+"wasteSaved" = "of waste\nsaved";
+
+"levelHeading" = "Current level: Recycling knight";
+"levelText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+
+"buttonsCamera" = "Camera";
+"buttonsThemeDark" = "Dark";
+"buttonsThemeLight" = "Light";

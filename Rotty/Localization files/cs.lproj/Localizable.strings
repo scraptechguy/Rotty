@@ -60,3 +60,12 @@
 "notificationsHeading" = "Upozornění";
 "notificationsToday" = "Dnes";
 "notificationsBefore" = "Dřívější";
+
+"wasteSaved" = "odpadu\nzachráněno";
+
+"levelHeading" = "Dosažený level: Třídící ninja";
+"levelText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
+
+"buttonsCamera" = "Kamera";
+"buttonsThemeDark" = "Tmavý";
+"buttonsThemeLight" = "Světlý";

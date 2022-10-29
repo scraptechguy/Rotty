@@ -24,6 +24,15 @@ struct HomeView: View {
     let notificationsToday: LocalizedStringKey = "notificationsToday"
     let notificationsBefore: LocalizedStringKey = "notificationsBefore"
     
+    let wasteSaved: LocalizedStringKey = "wasteSaved"
+    
+    let levelHeading: LocalizedStringKey = "levelHeading"
+    let levelText: LocalizedStringKey = "levelText"
+    
+    let buttonsCamera: LocalizedStringKey = "buttonsCamera"
+    let buttonsThemeDark: LocalizedStringKey = "buttonsThemeDark"
+    let buttonsThemeLight: LocalizedStringKey = "buttonsThemeLight"
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -148,7 +157,7 @@ struct HomeView: View {
                                             .font(.title2)
                                     }
                                     
-                                    Text("of waste\nsaved")
+                                    Text(wasteSaved)
                                         .multilineTextAlignment(.center)
                                 }.foregroundColor(.white)
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -185,7 +194,7 @@ struct HomeView: View {
                                                     .fill(Color("AccentColor"))
                                             }
                                         
-                                        Text("Camera")
+                                        Text(buttonsCamera)
                                             .font(.footnote)
                                     }
                                 })
@@ -220,7 +229,7 @@ struct HomeView: View {
                             )
                         
                         VStack {
-                            Text("Current level: Recycling knight")
+                            Text(levelHeading)
                                 .font(.headline)
                             
                             HStack {
@@ -231,7 +240,7 @@ struct HomeView: View {
                                     .overlay(Circle().stroke(.white, style: StrokeStyle(lineWidth: 2, dash: [5, 4])))
                                 
                                 VStack {
-                                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+                                    Text(levelText)
                                         .font(.subheadline)
                                         .multilineTextAlignment(.center)
                                     
@@ -280,7 +289,7 @@ struct HomeView: View {
                                             .font(.title2)
                                     }
                                     
-                                    Text("of waste\nsaved")
+                                    Text(wasteSaved)
                                         .multilineTextAlignment(.center)
                                 }.foregroundColor(.white)
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -323,7 +332,7 @@ struct HomeView: View {
                                             .frame(width: 80, height: 80)
                                             .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
                                         
-                                        Text(isDarkMode ? "Dark" : "Light")
+                                        Text(isDarkMode ? buttonsThemeDark : buttonsThemeLight)
                                             .font(.footnote)
                                     }
                                 })

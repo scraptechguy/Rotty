@@ -72,7 +72,7 @@ struct OnboardingView: View {
             let size = $0.size
             
             VStack {
-                Text("Sign up")
+                Text(signUpHeading)
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color("Font"))
@@ -91,7 +91,7 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Password")
+                    Text(signUpPassword)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
@@ -103,7 +103,7 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Reenter password")
+                    Text(signUpReenterPassword)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
@@ -146,7 +146,7 @@ struct OnboardingView: View {
             let size = $0.size
             
             VStack {
-                Text("Log in")
+                Text(logInHeading)
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color("Font"))
@@ -165,7 +165,7 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Password")
+                    Text(logInPassword)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
@@ -179,7 +179,7 @@ struct OnboardingView: View {
                 Button(action: {
                     
                 }, label: {
-                    Text("Forgot password?")
+                    Text(logInForgot)
                         .font(.footnote)
                 }).frame(maxWidth: .infinity, alignment: .trailing)
                 
@@ -226,7 +226,7 @@ struct OnboardingView: View {
                             .opacity(!screenIsLast ? 1 : 0)
                         
                         HStack {
-                            Text("Sign up")
+                            Text(signUpButton)
                                 .font(.title3)
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -265,14 +265,14 @@ struct OnboardingView: View {
                     let screenIsLast = currentIndex == intros.count
                     
                     HStack(spacing: 5) {
-                        Text("Already have an account?")
+                        Text(account)
                             .font(.system(size: 14))
                             .foregroundColor(.secondary)
                         
                         Button(action: {
                             showLogIn = true
                         }, label: {
-                            Text("Log in")
+                            Text(logInButton)
                                 .font(.system(size: 14))
                                 .foregroundColor(Color("AccentColor"))
                         })
@@ -324,14 +324,14 @@ struct OnboardingView: View {
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0.2 : 0).delay(currentIndex == index ? 0.1 : 0), value: currentIndex)
             
-            Text("And recycle!")
+            Text(welcomeHeading)
                 .bold()
                 .font(.system(size: 28))
                 .offset(x: -size.width * CGFloat(currentIndex - index))
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0 : 0.2).delay(currentIndex == index ? 0.2 : 0), value: currentIndex)
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(0.1).delay(currentIndex == index ? 0.1 : 0), value: currentIndex)
             
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+            Text(welcomeText)
                 .font(.system(size: 14))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 30)
@@ -374,7 +374,7 @@ struct OnboardingView: View {
             Button(action: {
                 currentIndex = intros.count
             }, label: {
-                Text("Skip")
+                Text(skipButton)
                     .foregroundColor(Color("Font"))
             }).opacity(screenIsLast ? 0 : 1)
                 .animation(.easeInOut, value: screenIsLast)
@@ -395,16 +395,16 @@ struct OnboardingView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: size.width, height: size.height / 2)
                 
-                Text("Rotty says hi!")
+                Text(introHeading)
                     .bold()
                     .font(.largeTitle)
                 
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                Text(introText)
                     .font(.system(size: 14))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 30)
                 
-                Text("Let's dive in")
+                Text(introButton)
                     .bold()
                     .font(.system(size: 17))
                     .padding(.horizontal, 40)

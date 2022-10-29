@@ -5,3 +5,10 @@
   Created by Rostislav Brož on 10/29/22.
   
 */
+
+// MARK: - Intro
+
+"introHeading" = "Rotty říká ahoj!";
+"introText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+"introButton" = "Jdeme na to";
+

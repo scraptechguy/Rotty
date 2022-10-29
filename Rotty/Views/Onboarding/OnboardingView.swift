@@ -21,6 +21,10 @@ struct OnboardingView: View {
     @State var newPassword = ""
     @State var status = ""
     
+    let introHeading: LocalizedStringKey = "introHeading"
+    let introText: LocalizedStringKey = "introText"
+    let introButton: LocalizedStringKey = "introButton"
+    
     var body: some View {
         ZStack {
             Color("Background")

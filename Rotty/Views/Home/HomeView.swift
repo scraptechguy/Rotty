@@ -233,11 +233,17 @@ struct HomeView: View {
                                 .font(.headline)
                             
                             HStack {
-                                Image(systemName: "figure.fencing")
-                                    .resizable()
-                                    .frame(width: 20, height: 28)
-                                    .padding()
-                                    .overlay(Circle().stroke(.white, style: StrokeStyle(lineWidth: 2, dash: [5, 4])))
+                                VStack {
+                                    Gauge(value: 23, in: 0...100) {
+                                        Text("23 %")
+                                    }.gaugeStyle(.accessoryCircularCapacity)
+                                        .frame(width: 50, height: 50)
+                                        .tint(.white)
+                                    
+                                    Text("2 364 points\nto the next level")
+                                        .font(.footnote)
+                                        .multilineTextAlignment(.center)
+                                }
                                 
                                 VStack {
                                     Text(levelText)

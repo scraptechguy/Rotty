@@ -99,13 +99,13 @@ struct HomeView: View {
                                     Image(systemName: "bell")
                                         .foregroundColor(Color("AccentColor"))
                                     
-                                    Text("Notifications")
+                                    Text(notificationsHeading)
                                         .foregroundColor(Color("Font"))
                                 }
                                     
                                 Divider()
                                 
-                                Text("Today")
+                                Text(notificationsToday)
                                     .font(.headline)
                                     .foregroundColor(Color("Font"))
                                 
@@ -114,7 +114,7 @@ struct HomeView: View {
                                     .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
                                 
-                                Text("25. 5.")
+                                Text(notificationsBefore)
                                     .font(.headline)
                                     .foregroundColor(Color("Font"))
                                 

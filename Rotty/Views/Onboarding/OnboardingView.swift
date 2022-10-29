@@ -25,6 +25,14 @@ struct OnboardingView: View {
     let introText: LocalizedStringKey = "introText"
     let introButton: LocalizedStringKey = "introButton"
     
+    let skipButton: LocalizedStringKey = "skipButton"
+    
+    let onboardingHeading1: LocalizedStringKey = "onboardingHeading1"
+    let onboardingText1: LocalizedStringKey = "onboardingText1"
+    
+    let onboardingHeading2: LocalizedStringKey = "onboardingHeading2"
+    let onboardingText2: LocalizedStringKey = "onboardingText2"
+    
     var body: some View {
         ZStack {
             Color("Background")

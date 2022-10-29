@@ -12,3 +12,13 @@
 "introText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 "introButton" = "Jdeme na to";
 
+// MARK: - Onboarding
+
+"skipButton" = "Přeskočit"
+
+"onboardingHeading1" = "Nebuď škrob"
+"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+"onboardingHeading2" = "Buď drsnej"
+"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+

@@ -12,3 +12,13 @@
 "introText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 "introButton" = "Let's dive in";
 
+// MARK: - Onboarding
+
+"skipButton" = "Skip"
+
+"onboardingHeading1" = "Don't be a jerk"
+"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+"onboardingHeading2" = "Be cool af"
+"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+

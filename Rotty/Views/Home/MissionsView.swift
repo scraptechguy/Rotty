@@ -13,6 +13,17 @@ struct MissionsView: View {
     
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     
+    let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
+    
+    let level1: LocalizedStringKey = "level1"
+    let level2: LocalizedStringKey = "level2"
+    let level3: LocalizedStringKey = "level3"
+    let level4: LocalizedStringKey = "level4"
+    let level5: LocalizedStringKey = "level5"
+    let level6: LocalizedStringKey = "level6"
+    let level7: LocalizedStringKey = "level7"
+    let level8: LocalizedStringKey = "level8"
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -31,7 +42,7 @@ struct MissionsView: View {
                                 .fill(Color("AccentColor"))
                         }
                         
-                    Text("Beginner ecologist")
+                    Text(level1)
                         .font(.title3)
                         .foregroundColor(Color("Font"))
                 }.frame(width: 260, alignment: .leading)
@@ -54,7 +65,7 @@ struct MissionsView: View {
                                 .fill(Color("AccentColor"))
                         }
                         
-                    Text("Gardener")
+                    Text(level2)
                         .font(.title3)
                         .foregroundColor(Color("Font"))
                 }.frame(width: 260, alignment: .leading)
@@ -76,7 +87,7 @@ struct MissionsView: View {
                                 .fill(Color("AccentColor"))
                         }
                         
-                    Text("Responsible ecologist")
+                    Text(level3)
                         .font(.title3)
                         .foregroundColor(Color("Font"))
                 }.frame(width: 260, alignment: .leading)
@@ -98,7 +109,7 @@ struct MissionsView: View {
                                 .fill(Color("AccentColor"))
                         }
                         
-                    Text("Biosphere saviour")
+                    Text(level4)
                         .font(.title3)
                         .foregroundColor(Color("Font"))
                 }.frame(width: 260, alignment: .leading)
@@ -120,7 +131,7 @@ struct MissionsView: View {
                                 .fill(Color("AccentColor"))
                         }
                         
-                    Text("Environmental activist")
+                    Text(level5)
                         .font(.title3)
                         .foregroundColor(Color("Font"))
                 }.frame(width: 260, alignment: .leading)
@@ -140,7 +151,7 @@ struct MissionsView: View {
                         .overlay(Circle().stroke(.white, style: StrokeStyle(lineWidth: 2, dash: [5, 4])))
                         .padding(.horizontal, 10)
                         
-                    Text("Recycling knight")
+                    Text(level6)
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -164,7 +175,7 @@ struct MissionsView: View {
                         .frame(width: 15, height: 18)
                         .padding(3)
                         
-                    Text("Mr. Compost")
+                    Text(level7)
                         .font(.title3)
                         .foregroundColor(.secondary)
                 }.frame(width: 260, alignment: .leading)
@@ -181,7 +192,7 @@ struct MissionsView: View {
                         .frame(width: 15, height: 18)
                         .padding(3)
                         
-                    Text("Greta Thunberd the 2nd")
+                    Text(level8)
                         .font(.title3)
                         .foregroundColor(.secondary)
                 }.frame(width: 260, alignment: .leading)
@@ -215,7 +226,7 @@ struct MissionsView: View {
                 .padding(.top, 15)
                 .frame(maxHeight: .infinity, alignment: .top)
             
-            Text("My missions")
+            Text(myMissionsHeading)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color("Font"))

@@ -41,3 +41,17 @@
 "logInHeading" = "Log in";
 "logInPassword" = "Password";
 "logInForgot" = "Forgot password?";
+
+// MARK: - My missions
+
+"myMissionsHeading" = "My missions";
+
+"level1" = "Beginner ecologist";
+"level2" = "Gardener";
+"level3" = "Responsible ecologist";
+"level4" = "Biosphere saviour";
+"level5" = "Environmental activist";
+"level6" = "Recycling knight";
+"level7" = "Mr. Compost";
+"level8" = "Greta Thunberg the 2nd";
+

@@ -41,3 +41,16 @@
 "logInHeading" = "Přihlášení";
 "logInPassword" = "Heslo";
 "logInForgot" = "Zapomenuté heslo?";
+
+// MARK: - My missions
+
+"myMissionsHeading" = "Moje mise";
+
+"level1" = "Ekolog začátečník";
+"level2" = "Zahradník";
+"level3" = "Zodpovědný ekolog";
+"level4" = "Zachránce biosféry";
+"level5" = "Ekologický aktivista";
+"level6" = "Třídící ninja";
+"level7" = "Mistr komposťák";
+"level8" = "Druhá Greta Thunberg";

@@ -17,6 +17,9 @@ struct HomeView: View {
     @State var isDarkMode = false
     @State var isInEnglish = true
     
+    let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
+    let level6: LocalizedStringKey = "level6"
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -69,11 +72,11 @@ struct HomeView: View {
                             Button(action: {
                                 
                             }, label: {
-                                Text("Recycling knight")
+                                Text(level6)
                                     .font(.headline)
                             })
                             
-                            Text(" Level 6")
+                            Text(" Lvl. 6")
                                 .foregroundColor(Color("Font"))
                         }
                     }.opacity(showViews[0] ? 1 : 0)
@@ -231,9 +234,10 @@ struct HomeView: View {
                                     Button(action: {
                                         showingMissionsView = true
                                     }, label: {
-                                        Text("My missions")
+                                        Text(myMissionsHeading)
                                             .foregroundColor(.black)
                                             .padding(9)
+                                            .padding(.horizontal, 5)
                                             .background {
                                                 RoundedRectangle(cornerRadius: 30)
                                             }

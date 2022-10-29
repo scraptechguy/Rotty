@@ -30,3 +30,9 @@
 "account" = "Už máš účet?"
 "logInButton" = "Přihlásit se"
 
+// MARK: - Sign up
+
+"signUpHeading" = "Registrace"
+"signUpPassword" = "Heslo"
+"signUpReenterPassword" = "Heslo znovu"
+

@@ -39,6 +39,10 @@ struct OnboardingView: View {
     let account: LocalizedStringKey = "account"
     let logInButton: LocalizedStringKey = "logInButton"
     
+    let signUpHeading: LocalizedStringKey = "signUpHeading"
+    let signUpPassword: LocalizedStringKey = "signUpPassword"
+    let signUpReenterPassword: LocalizedStringKey = "signUpReenterPassword"
+    
     var body: some View {
         ZStack {
             Color("Background")

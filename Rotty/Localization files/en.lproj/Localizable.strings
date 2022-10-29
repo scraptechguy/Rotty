@@ -30,3 +30,9 @@
 "account" = "Already have an account?"
 "logInButton" = "Log in"
 
+// MARK: - Sign up
+
+"signUpHeading" = "Sign up"
+"signUpPassword" = "Password"
+"signUpReenterPassword" = "Reenter password"
+

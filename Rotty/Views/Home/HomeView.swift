@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     
     @State var showingHelpView = false
+    @State var showingMissionsView = false
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     @State var isDarkMode = false
     @State var isInEnglish = true
@@ -225,7 +226,7 @@ struct HomeView: View {
                                         .multilineTextAlignment(.center)
                                     
                                     Button(action: {
-                                        
+                                        showingMissionsView = true
                                     }, label: {
                                         Text("My missions")
                                             .foregroundColor(.black)
@@ -233,7 +234,11 @@ struct HomeView: View {
                                             .background {
                                                 RoundedRectangle(cornerRadius: 30)
                                             }
-                                    })
+                                    }).sheet(isPresented: $showingMissionsView) {
+                                        MissionsView()
+                                            .presentationDetents([.medium, .large])
+                                    }
+                                    
                                 }.frame(width: 200)
                             }
                         }.foregroundColor(.white)

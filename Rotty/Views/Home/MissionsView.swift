@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MissionsView: View {
     
+    @EnvironmentObject var model: ContentModel
+    
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     
     var body: some View {
@@ -36,7 +38,7 @@ struct MissionsView: View {
                     .padding(.horizontal, 12)
                     .padding(.vertical, 8)
                     .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color("AccentColor"), lineWidth: 2))
-                    .padding(.top, 7)
+                    .padding(.top, 8)
                     .opacity(showViews[0] ? 1 : 0)
                     .offset(y: showViews[0] ? 0 : 200)
                 
@@ -188,7 +190,7 @@ struct MissionsView: View {
                     .overlay(RoundedRectangle(cornerRadius: 30).stroke(.secondary, lineWidth: 2))
                     .opacity(showViews[7] ? 1 : 0)
                     .offset(y: showViews[7] ? 0 : 200)
-            }.padding(.top, 63)
+            }.padding(.top, 62)
                 .onAppear(perform: animateViews)
             
             HStack {

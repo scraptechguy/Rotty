@@ -55,3 +55,9 @@
 "level7" = "Mr. Compost";
 "level8" = "Greta Thunberg the 2nd";
 
+// MARK: - Home view
+
+"notificationsHeading" = "Notifications";
+"notificationsToday" = "Today";
+"notificationsBefore" = "Before";
+

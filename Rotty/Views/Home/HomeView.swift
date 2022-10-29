@@ -20,6 +20,10 @@ struct HomeView: View {
     let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
     let level6: LocalizedStringKey = "level6"
     
+    let notificationsHeading: LocalizedStringKey = "notificationsHeading"
+    let notificationsToday: LocalizedStringKey = "notificationsToday"
+    let notificationsBefore: LocalizedStringKey = "notificationsBefore"
+    
     var body: some View {
         ZStack {
             Color("Background")

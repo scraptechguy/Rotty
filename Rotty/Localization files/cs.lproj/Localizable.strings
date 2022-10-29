@@ -54,3 +54,9 @@
 "level6" = "Třídící ninja";
 "level7" = "Mistr komposťák";
 "level8" = "Druhá Greta Thunberg";
+
+// MARK: - Home view
+
+"notificationsHeading" = "Upozornění";
+"notificationsToday" = "Dnes";
+"notificationsBefore" = "Dřívější";

@@ -14,30 +14,30 @@
 
 // MARK: - Onboarding
 
-"skipButton" = "Skip"
+"skipButton" = "Skip";
 
-"onboardingHeading1" = "Don't be a jerk"
-"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"onboardingHeading1" = "Don't be a jerk";
+"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-"onboardingHeading2" = "Be cool af"
-"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"onboardingHeading2" = "Be cool af";
+"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 // MARK: - Welcome
 
-"welcomeHeading" = "And recycle!"
-"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-"signUpButton" = "Sign up"
-"account" = "Already have an account?"
-"logInButton" = "Log in"
+"welcomeHeading" = "And recycle!";
+"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+"signUpButton" = "Sign up";
+"account" = "Already have an account?";
+"logInButton" = "Log in";
 
 // MARK: - Sign up
 
-"signUpHeading" = "Sign up"
-"signUpPassword" = "Password"
-"signUpReenterPassword" = "Reenter password"
+"signUpHeading" = "Sign up";
+"signUpPassword" = "Password";
+"signUpReenterPassword" = "Reenter password";
 
 // MARK: - Log in
 
-"logInHeading" = "Log in"
-"logInPassword" = "Password"
-"logInForgot" = "Forgot password?"
+"logInHeading" = "Log in";
+"logInPassword" = "Password";
+"logInForgot" = "Forgot password?";

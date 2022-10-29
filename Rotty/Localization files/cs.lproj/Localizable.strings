@@ -14,30 +14,30 @@
 
 // MARK: - Onboarding
 
-"skipButton" = "Přeskočit"
+"skipButton" = "Přeskočit";
 
-"onboardingHeading1" = "Nebuď škrob"
-"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"onboardingHeading1" = "Nebuď škrob";
+"onboardingText1" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-"onboardingHeading2" = "Buď drsnej"
-"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"onboardingHeading2" = "Buď drsnej";
+"onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 // MARK: - Welcome
 
-"welcomeHeading" = "A recykluj!"
-"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-"signUpButton" = "Zaregistrovat se"
-"account" = "Už máš účet?"
-"logInButton" = "Přihlásit se"
+"welcomeHeading" = "A recykluj!";
+"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+"signUpButton" = "Zaregistrovat se";
+"account" = "Už máš účet?";
+"logInButton" = "Přihlásit se";
 
 // MARK: - Sign up
 
-"signUpHeading" = "Registrace"
-"signUpPassword" = "Heslo"
-"signUpReenterPassword" = "Heslo znovu"
+"signUpHeading" = "Registrace";
+"signUpPassword" = "Heslo";
+"signUpReenterPassword" = "Heslo znovu";
 
 // MARK: - Log in
 
-"logInHeading" = "Přihlášení"
-"logInPassword" = "Heslo"
-"logInForgot" = "Zapomenuté heslo?"
+"logInHeading" = "Přihlášení";
+"logInPassword" = "Heslo";
+"logInForgot" = "Zapomenuté heslo?";

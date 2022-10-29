@@ -236,7 +236,7 @@ struct HomeView: View {
                                             }
                                     }).sheet(isPresented: $showingMissionsView) {
                                         MissionsView()
-                                            .presentationDetents([.medium, .large])
+                                            .presentationDetents([.medium])
                                     }
                                     
                                 }.frame(width: 200)

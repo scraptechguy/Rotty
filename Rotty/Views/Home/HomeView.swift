@@ -77,7 +77,7 @@ struct HomeView: View {
                             .padding(5)
                             .overlay(Circle().stroke(Color("AccentColor"), style: StrokeStyle(lineWidth: 2, dash: [5, 7])))
                         
-                        Text("Anicka")
+                        Text("Anička")
                             .font(.title3)
                             .foregroundColor(Color("Font"))
                         

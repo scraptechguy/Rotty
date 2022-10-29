@@ -22,3 +22,11 @@
 "onboardingHeading2" = "Buď drsnej"
 "onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
+// MARK: - Welcome
+
+"welcomeHeading" = "A recykluj!"
+"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"signUpButton" = "Zaregistrovat se"
+"account" = "Už máš účet?"
+"logInButton" = "Přihlásit se"
+

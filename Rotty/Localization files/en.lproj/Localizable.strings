@@ -22,3 +22,11 @@
 "onboardingHeading2" = "Be cool af"
 "onboardingText2" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
+// MARK: - Welcome
+
+"welcomeHeading" = "And recycle!"
+"welcomeText" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+"signUpButton" = "Sign up"
+"account" = "Already have an account?"
+"logInButton" = "Log in"
+

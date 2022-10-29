@@ -42,7 +42,10 @@ struct HomeView: View {
                                             .fill(Color("AccentColor"))
                                     }
                                     .padding(.trailing, 15)
-                            }).sheet(isPresented: $showingHelpView) {HelpView()}
+                            }).sheet(isPresented: $showingHelpView) {
+                                HelpView()
+                                    .presentationDetents([.large])
+                            }
                         }
                         
                         Spacer()
@@ -237,6 +240,7 @@ struct HomeView: View {
                                     }).sheet(isPresented: $showingMissionsView) {
                                         MissionsView()
                                             .presentationDetents([.medium])
+                                            .presentationDragIndicator(.visible)
                                     }
                                     
                                 }.frame(width: 200)

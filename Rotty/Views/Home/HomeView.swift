@@ -151,6 +151,7 @@ struct HomeView: View {
                                     VStack {
                                         Image(systemName: "cloud")
                                             .padding()
+                                            .scaleEffect(1.5)
                                             .frame(width: 80, height: 80)
                                             .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
                                         
@@ -166,6 +167,7 @@ struct HomeView: View {
                                         Image(systemName: "camera")
                                             .foregroundColor(.white)
                                             .padding()
+                                            .scaleEffect(1.3)
                                             .frame(width: 80, height: 80)
                                             .background {
                                                 RoundedRectangle(cornerRadius: 28)
@@ -280,6 +282,7 @@ struct HomeView: View {
                                         Image(systemName: isInEnglish ? "globe.americas" : "house")
                                             .foregroundColor(.white)
                                             .padding()
+                                            .scaleEffect(1.5)
                                             .frame(width: 80, height: 80)
                                             .background {
                                                 RoundedRectangle(cornerRadius: 28)
@@ -299,6 +302,7 @@ struct HomeView: View {
                                     VStack {
                                         Image(systemName: isDarkMode ? "moon.fill" : "sun.max.fill")
                                             .padding()
+                                            .scaleEffect(1.5)
                                             .frame(width: 80, height: 80)
                                             .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
                                         

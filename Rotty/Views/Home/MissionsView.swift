@@ -208,7 +208,7 @@ struct MissionsView: View {
                 Spacer()
                 
                 Button(action: {
-                    HomeView().showingMissionsView = false
+                    model.showingMissionsView = false
                 }, label: {
                     Image(systemName: "multiply")
                         .resizable()

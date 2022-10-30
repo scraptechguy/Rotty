@@ -74,7 +74,7 @@ struct HelpView: View {
                 Spacer()
                 
                 Button(action: {
-                    HomeView().showingHelpView = false
+                    model.showingHelpView = false
                 }, label: {
                     Image(systemName: "multiply")
                         .resizable()

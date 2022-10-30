@@ -12,8 +12,6 @@ struct HomeView: View {
     @EnvironmentObject var model: ContentModel
     @Environment(\.colorScheme) var current
     
-    @State var showingHelpView = false
-    @State var showingMissionsView = false
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     @State var isInEnglish = true
     
@@ -45,7 +43,7 @@ struct HomeView: View {
                             Spacer()
                             
                             Button(action: {
-                                showingHelpView = true
+                                model.showingHelpView = true
                             }, label: {
                                 Image(systemName: "questionmark")
                                     .resizable()
@@ -58,7 +56,7 @@ struct HomeView: View {
                                             .fill(Color("AccentColor"))
                                     }
                                     .padding(.trailing, 15)
-                            }).sheet(isPresented: $showingHelpView) {
+                            }).sheet(isPresented: $model.showingHelpView) {
                                 HelpView()
                                     .presentationDetents([.large])
                             }
@@ -251,7 +249,7 @@ struct HomeView: View {
                                         .multilineTextAlignment(.center)
                                     
                                     Button(action: {
-                                        showingMissionsView = true
+                                        model.showingMissionsView = true
                                     }, label: {
                                         Text(myMissionsHeading)
                                             .foregroundColor(.black)
@@ -260,7 +258,7 @@ struct HomeView: View {
                                             .background {
                                                 RoundedRectangle(cornerRadius: 30)
                                             }
-                                    }).sheet(isPresented: $showingMissionsView) {
+                                    }).sheet(isPresented: $model.showingMissionsView) {
                                         MissionsView()
                                             .presentationDetents([.medium])
                                             .presentationDragIndicator(.visible)

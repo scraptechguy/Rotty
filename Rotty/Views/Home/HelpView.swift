@@ -65,10 +65,14 @@ struct HelpView: View {
                         }
                     }
                 }, label: {
-                    Image(systemName: "chevron.left")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color("Font"))
+                    if index == 0 {
+                        
+                    } else {
+                        Image(systemName: "chevron.left")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("Font"))
+                    }
                 })
                 
                 Spacer()

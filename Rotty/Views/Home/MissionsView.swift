@@ -234,7 +234,7 @@ struct MissionsView: View {
                 .frame(maxHeight: .infinity, alignment: .top)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 15)
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
     func animateViews() {

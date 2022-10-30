@@ -12,7 +12,7 @@ class ContentModel: ObservableObject {
     
     // MARK: State vars
     
-    // Stored as @State var for testing purposes
     @AppStorage("onboardingShown") var onboardingShown = false
+    @AppStorage("isDarkMode") var isDarkMode = false
     
 }

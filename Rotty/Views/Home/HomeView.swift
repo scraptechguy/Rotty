@@ -10,11 +10,11 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var model: ContentModel
+    @Environment(\.colorScheme) var current
     
     @State var showingHelpView = false
     @State var showingMissionsView = false
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
-    @State var isDarkMode = false
     @State var isInEnglish = true
     
     let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
@@ -328,17 +328,17 @@ struct HomeView: View {
                                 
                                 Button(action: {
                                     withAnimation {
-                                        isDarkMode.toggle()
+                                        model.isDarkMode.toggle()
                                     }
                                 }, label: {
                                     VStack {
-                                        Image(systemName: isDarkMode ? "moon.fill" : "sun.max.fill")
+                                        Image(systemName: model.isDarkMode ? "moon.fill" : "sun.max.fill")
                                             .padding()
                                             .scaleEffect(1.5)
                                             .frame(width: 80, height: 80)
                                             .overlay(RoundedRectangle(cornerRadius: 28).stroke(Color("AccentColor"), lineWidth: 2))
                                         
-                                        Text(isDarkMode ? buttonsThemeDark : buttonsThemeLight)
+                                        Text(model.isDarkMode ? buttonsThemeDark : buttonsThemeLight)
                                             .font(.footnote)
                                     }
                                 })
@@ -423,6 +423,7 @@ struct HomeView: View {
                 }
             }
         }.onAppear(perform: animateViews)
+            .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
     func animateViews() {

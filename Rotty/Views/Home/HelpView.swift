@@ -98,7 +98,7 @@ struct HelpView: View {
                 .foregroundColor(Color("Font"))
                 .padding(.top, 15)
                 .frame(maxHeight: .infinity, alignment: .top)
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
 }
 

@@ -64,6 +64,7 @@ struct OnboardingView: View {
         }.animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showOnboardingScreens)
             .animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showLogIn)
             .animation(.interactiveSpring(response: 1.1, dampingFraction: 0.85, blendDuration: 0.85), value: showSignUp)
+            .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
     @ViewBuilder

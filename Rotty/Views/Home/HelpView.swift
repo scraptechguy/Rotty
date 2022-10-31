@@ -93,7 +93,7 @@ struct HelpView: View {
                         }
                     }
                     .offset(y: screenIsLast ? 70 : 20)
-                    .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
+                    .animation(.interactiveSpring(response: 0.45, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
             }
             
             HStack {

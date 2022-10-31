@@ -22,6 +22,7 @@ struct OnboardingView: View {
     @State var logInPassword = ""
     
     @State var signUpEmail = ""
+    @State var emailIsValid: Bool = true
     @State var signUpPassword = ""
     @State var signUpReenteredPassword = ""
     
@@ -320,8 +321,22 @@ struct OnboardingView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    TextField("anna.surovkova@outlook.com", text: $signUpEmail)
-                        .font(.system(size: 20, weight: .semibold))
+                    TextField("anna.surovkova@outlook.com", text: $signUpEmail, onEditingChanged: { (isChanged) in
+                        if !isChanged {
+                            
+                            if textFieldValidatorEmail(signUpEmail) {
+                                
+                                emailIsValid = true
+                                
+                            } else {
+                                
+                                emailIsValid = false
+                                signUpEmail = ""
+                                
+                            }
+                            
+                        }
+                    }).font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     
                     Divider()
@@ -358,7 +373,7 @@ struct OnboardingView: View {
                     .frame(height: 20)
                 
                 Button(action: {
-                    if signUpPassword == signUpReenteredPassword {
+                    if signUpPassword == signUpReenteredPassword && emailIsValid {
                         
                         model.onboardingShown = true
                         
@@ -453,6 +468,21 @@ struct OnboardingView: View {
                 .padding()
                 .offset(y: !showLogIn ? size.height : 0)
         }.ignoresSafeArea()
+    }
+    
+    func textFieldValidatorEmail(_ string: String) -> Bool {
+        
+        if string.count > 100 {
+            
+            return false
+            
+        }
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: string)
+        
     }
 }
 

@@ -358,7 +358,20 @@ struct OnboardingView: View {
                     .frame(height: 20)
                 
                 Button(action: {
-                    model.onboardingShown = true
+                    if signUpPassword == signUpReenteredPassword {
+                        
+                        model.onboardingShown = true
+                        
+                    } else if signUpPassword != signUpReenteredPassword {
+                        
+                        status = "Passwords don't match"
+                        
+                    } /*else if signUpEmail == "" || signUpPassword == "" || signUpReenteredPassword == "" {
+                        
+                        status = "Missing fields"
+                        
+                    }
+                       */
                 }, label: {
                     Image(systemName: "chevron.right")
                         .font(.title3)

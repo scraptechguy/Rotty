@@ -69,3 +69,7 @@
 "buttonsCamera" = "Kamera";
 "buttonsThemeDark" = "Tmavý";
 "buttonsThemeLight" = "Světlý";
+
+// MARK: - Help view
+
+"helpViewButton" = "Jasný!";

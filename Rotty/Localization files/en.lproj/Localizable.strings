@@ -69,3 +69,7 @@
 "buttonsCamera" = "Camera";
 "buttonsThemeDark" = "Dark";
 "buttonsThemeLight" = "Light";
+
+// MARK: - Help view
+
+"helpViewButton" = "Got it";

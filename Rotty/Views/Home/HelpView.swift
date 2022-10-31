@@ -14,6 +14,8 @@ struct HelpView: View {
     @State private var index: Int = 0
     @State private var screenIsLast = false
     
+    let helpViewButton: LocalizedStringKey = "helpViewButton"
+    
     var body: some View {
         ZStack {
             Color("Background")
@@ -46,7 +48,7 @@ struct HelpView: View {
                         .opacity(!screenIsLast ? 1 : 0)
                     
                     HStack {
-                        Text("Got it!")
+                        Text(helpViewButton)
                             .font(.title3)
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .leading)

@@ -16,10 +16,14 @@ struct OnboardingView: View {
     @State var showSignUp: Bool = false
     @State var currentIndex: Int = 0
     
-    @State var email = ""
-    @State var password = ""
-    @State var newPassword = ""
     @State var status = ""
+    
+    @State var logInEmail = ""
+    @State var logInPassword = ""
+    
+    @State var signUpEmail = ""
+    @State var signUpPassword = ""
+    @State var signUpReenteredPassword = ""
     
     let introHeading: LocalizedStringKey = "introHeading"
     let introText: LocalizedStringKey = "introText"
@@ -40,11 +44,11 @@ struct OnboardingView: View {
     let logInButton: LocalizedStringKey = "logInButton"
     
     let signUpHeading: LocalizedStringKey = "signUpHeading"
-    let signUpPassword: LocalizedStringKey = "signUpPassword"
-    let signUpReenterPassword: LocalizedStringKey = "signUpReenterPassword"
+    let signUpPasswordHeading: LocalizedStringKey = "signUpPassword"
+    let signUpReenterPasswordHeading: LocalizedStringKey = "signUpReenterPassword"
     
     let logInHeading: LocalizedStringKey = "logInHeading"
-    let logInPassword: LocalizedStringKey = "logInPassword"
+    let logInPasswordHeading: LocalizedStringKey = "logInPassword"
     let logInForgot: LocalizedStringKey = "logInForgot"
     
     var body: some View {
@@ -316,7 +320,7 @@ struct OnboardingView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    TextField("anna.surovkova@outlook.com", text: $email)
+                    TextField("anna.surovkova@outlook.com", text: $signUpEmail)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     
@@ -324,11 +328,11 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(signUpPassword)
+                    Text(signUpPasswordHeading)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    SecureField("mypassword123", text: $password)
+                    SecureField("mypassword123", text: $signUpPassword)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     
@@ -336,11 +340,11 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(signUpReenterPassword)
+                    Text(signUpReenterPasswordHeading)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    SecureField("mypassword123", text: $password)
+                    SecureField("mypassword123", text: $signUpReenteredPassword)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     
@@ -392,7 +396,7 @@ struct OnboardingView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    TextField("anna.surovkova@outlook.com", text: $email)
+                    TextField("anna.surovkova@outlook.com", text: $logInEmail)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     
@@ -400,11 +404,11 @@ struct OnboardingView: View {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 VStack(alignment: .leading, spacing: 8) {
-                    Text(logInPassword)
+                    Text(logInPasswordHeading)
                         .fontWeight(.bold)
                         .foregroundColor(.secondary)
                     
-                    SecureField("mypassword123", text: $password)
+                    SecureField("mypassword123", text: $logInPassword)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(.secondary)
                     

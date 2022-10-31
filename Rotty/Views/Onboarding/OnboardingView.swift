@@ -67,6 +67,8 @@ struct OnboardingView: View {
             .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
+    // MARK: - Sign up screen
+    
     @ViewBuilder
     func SignUpScreen() -> some View {
         GeometryReader {
@@ -141,6 +143,8 @@ struct OnboardingView: View {
         }.ignoresSafeArea()
     }
     
+    // MARK: - Log in screen
+    
     @ViewBuilder
     func LogInScreen() -> some View {
         GeometryReader {
@@ -203,6 +207,8 @@ struct OnboardingView: View {
                 .offset(y: !showLogIn ? size.height : 0)
         }.ignoresSafeArea()
     }
+    
+    // MARK: - Onboarding screens
     
     @ViewBuilder
     func OnboardingScreens() -> some View {
@@ -286,6 +292,8 @@ struct OnboardingView: View {
         }
     }
     
+    // MARK: - Onboarding screen
+    
     @ViewBuilder
     func OnboardingScreen(size: CGSize, index: Int) -> some View {
         let intro = intros[index]
@@ -313,6 +321,8 @@ struct OnboardingView: View {
                 .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5).delay(currentIndex == index ? 0.2 : 0).delay(currentIndex == index ? 0.2 : 0), value: currentIndex)
         }
     }
+    
+    // MARK: - Welcome screen
     
     @ViewBuilder
     func WelcomeScreen(size: CGSize, index: Int) -> some View {
@@ -342,6 +352,8 @@ struct OnboardingView: View {
             .offset(y: showLogIn ? -size.height : 0)
             .offset(y: showSignUp ? -size.height : 0)
     }
+    
+    // MARK: - Navigation bar
     
     @ViewBuilder
     func NavigationBar() -> some View {
@@ -384,6 +396,8 @@ struct OnboardingView: View {
             .frame(maxHeight: .infinity, alignment: .top)
             .offset(y: showOnboardingScreens ? 0 : -120)
     }
+    
+    // MARK: - Intro screen
     
     @ViewBuilder
     func IntroScreen() -> some View {

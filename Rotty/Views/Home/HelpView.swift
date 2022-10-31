@@ -11,7 +11,8 @@ struct HelpView: View {
     
     @EnvironmentObject var model: ContentModel
     
-    @State var index: Int = 0
+    @State private var index: Int = 0
+    @State private var screenIsLast = false
     
     var body: some View {
         ZStack {
@@ -37,32 +38,66 @@ struct HelpView: View {
                 }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                     .frame(height: 500)
                 
-                Button(action: {
-                    withAnimation {
-                        if index < 2 {
-                            index += 1
-                        }
-                    }
-                }, label: {
+                ZStack {
                     Image(systemName: "chevron.right")
                         .font(.title3)
                         .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 55, height: 55)
-                        .background {
-                            RoundedRectangle(cornerRadius: 30, style: .circular)
-                                .fill(Color("AccentColor"))
+                        .scaleEffect(!screenIsLast ? 1 : 0.001)
+                        .opacity(!screenIsLast ? 1 : 0)
+                    
+                    HStack {
+                        Text("Got it!")
+                            .font(.title3)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        Image(systemName: "arrow.right")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                    }.padding(.horizontal, 15)
+                        .scaleEffect(screenIsLast ? 1 : 0.001)
+                        .frame(height: screenIsLast ? nil : 0)
+                        .opacity(screenIsLast ? 1 : 0)
+                }.frame(width: screenIsLast ? 200 : 55, height: screenIsLast ? 50 : 55)
+                    .foregroundColor(.white)
+                    .background {
+                        RoundedRectangle(cornerRadius: screenIsLast ? 10 : 30, style: screenIsLast ? .continuous : .circular)
+                            .fill(Color("AccentColor"))
+                    }
+                    .onTapGesture {
+                        withAnimation {
+                            if index < 2 {
+                                
+                                index += 1
+                                
+                            }
+                            
+                            if index == 2 {
+                                
+                                screenIsLast = true
+                                
+                            } else {
+                                
+                                screenIsLast = false
+                                
+                            }
                         }
-                        .padding(.top, 80)
-                })
+                    }
+                    .offset(y: screenIsLast ? 70 : 20)
+                    .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
             }
             
             HStack {
                 Button(action: {
                     withAnimation {
                         if index > 0 {
+                            
                             index -= 1
+                            
                         }
+                        
+                        screenIsLast = false
                     }
                 }, label: {
                     if index == 0 {
@@ -79,6 +114,8 @@ struct HelpView: View {
                 
                 Button(action: {
                     model.showingHelpView = false
+                    
+                    screenIsLast = false
                 }, label: {
                     Image(systemName: "multiply")
                         .resizable()

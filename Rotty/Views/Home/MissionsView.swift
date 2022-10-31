@@ -275,5 +275,6 @@ struct MissionsView: View {
 struct MissionsView_Previews: PreviewProvider {
     static var previews: some View {
         MissionsView()
+            .environmentObject(ContentModel())
     }
 }

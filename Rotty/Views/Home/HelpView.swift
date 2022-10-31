@@ -75,6 +75,12 @@ struct HelpView: View {
                                 
                             }
                             
+                            if screenIsLast {
+                                
+                                model.showingHelpView = false
+                                
+                            }
+                            
                             if index == 2 {
                                 
                                 screenIsLast = true

@@ -16,5 +16,6 @@ class ContentModel: ObservableObject {
     @AppStorage("isDarkMode") var isDarkMode = false
     @AppStorage("showingHelpView") var showingHelpView = false
     @AppStorage("showingMissionsView") var showingMissionsView = false
+    @AppStorage("points") var points = 0
     
 }

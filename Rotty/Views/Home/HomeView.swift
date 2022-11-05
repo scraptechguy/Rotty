@@ -16,7 +16,14 @@ struct HomeView: View {
     @State var isInEnglish = true
     
     let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
+    let level1: LocalizedStringKey = "level1"
+    let level2: LocalizedStringKey = "level2"
+    let level3: LocalizedStringKey = "level3"
+    let level4: LocalizedStringKey = "level4"
+    let level5: LocalizedStringKey = "level5"
     let level6: LocalizedStringKey = "level6"
+    let level7: LocalizedStringKey = "level7"
+    let level8: LocalizedStringKey = "level8"
     
     let notificationsHeading: LocalizedStringKey = "notificationsHeading"
     let notificationsToday: LocalizedStringKey = "notificationsToday"

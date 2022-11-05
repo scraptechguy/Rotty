@@ -14,6 +14,7 @@ struct HomeView: View {
     
     @State var showViews: [Bool] = Array(repeating: false, count: 8)
     @State var isInEnglish = true
+    @State var index = 0
     
     let myMissionsHeading: LocalizedStringKey = "myMissionsHeading"
     let level1: LocalizedStringKey = "level1"
@@ -351,7 +352,7 @@ struct HomeView: View {
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         }.frame(maxWidth: .infinity)
                         
-                        // MARK: - Notifications
+                        // MARK: - Recipes
                         
                         ZStack {
                             Rectangle()
@@ -360,33 +361,53 @@ struct HomeView: View {
                             
                             VStack(spacing: 10) {
                                 HStack {
-                                    Image(systemName: "bell")
+                                    Image(systemName: "book")
                                         .foregroundColor(Color("AccentColor"))
                                     
-                                    Text("Notifications")
+                                    Text("Recipes")
                                         .foregroundColor(Color("Font"))
                                 }
                                 
                                 Divider()
+                                    .padding(.horizontal)
                                 
-                                Text("Today")
-                                    .font(.headline)
-                                    .foregroundColor(Color("Font"))
-                                
-                                Text("Lorem ipsum dolor sit amet, consectetur")
-                                    .font(.footnote)
-                                    .foregroundColor(Color("Font"))
-                                    .multilineTextAlignment(.center)
-                                
-                                Text("25. 5.")
-                                    .font(.headline)
-                                    .foregroundColor(Color("Font"))
-                                
-                                Text("Lorem ipsum dolor sit amet, consectetur")
-                                    .font(.footnote)
-                                    .foregroundColor(Color("Font"))
-                                    .multilineTextAlignment(.center)
-                            }.padding(.horizontal)
+                                TabView(selection: $index) {
+                                    VStack {
+                                        Text("Rizek")
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(Color("Font"))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit...")
+                                            .font(.footnote)
+                                            .foregroundColor(Color("Font"))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        Text("Swipe for more ->")
+                                            .font(.footnote)
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(.secondary)
+                                            .padding(.top, 22)
+                                    }.frame(maxHeight: .infinity, alignment: .top)
+                                        .padding(.horizontal)
+                                        .tag(0)
+                                    
+                                    VStack {
+                                        Text("Rizek")
+                                            .fontWeight(.semibold)
+                                            .foregroundColor(Color("Font"))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit...")
+                                            .font(.footnote)
+                                            .foregroundColor(Color("Font"))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                    }.frame(maxHeight: .infinity, alignment: .top)
+                                        .padding(.horizontal)
+                                        .tag(1)
+                                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                            }.frame(maxHeight: .infinity, alignment: .top)
+                                .padding(.top)
                         }.frame(maxWidth: .infinity)
                             .opacity(showViews[7] ? 1 : 0)
                                 .offset(y: showViews[7] ? 0 : 280)

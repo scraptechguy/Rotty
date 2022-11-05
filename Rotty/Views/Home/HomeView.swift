@@ -280,7 +280,7 @@ struct HomeView: View {
                         .opacity(showViews[5] ? 1 : 0)
                             .offset(y: showViews[5] ? 0 : 280)
                     
-                    // MARK: - Waste saved
+                    // MARK: - Recipes
                     
                     HStack {
                         VStack {
@@ -291,20 +291,16 @@ struct HomeView: View {
                                         RoundedRectangle(cornerRadius: 30)
                                     )
                                 
-                                HStack(spacing: 10) {
-                                    VStack {
-                                        Image(systemName: "chart.bar")
-                                            .resizable()
-                                            .frame(width: 35, height: 30)
-                                        
-                                        Text("6 kg")
-                                            .bold()
-                                            .font(.title2)
-                                    }
+                                VStack {
+                                    Text("Recipes")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
                                     
-                                    Text(wasteSaved)
-                                        .multilineTextAlignment(.center)
-                                }.foregroundColor(.white)
+                                    Divider()
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                    .frame(maxHeight: .infinity, alignment: .top)
+                                    .padding(.horizontal)
+                                    .padding(.vertical, 12)
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .opacity(showViews[6] ? 1 : 0)
                                     .offset(y: showViews[6] ? 0 : 280)
@@ -318,7 +314,7 @@ struct HomeView: View {
                                     }
                                 }, label: {
                                     VStack {
-                                        Image(systemName: isInEnglish ? "globe.americas" : "house")
+                                        Image(systemName: isInEnglish ? "globe.americas" : "globe.europe.africa")
                                             .foregroundColor(.white)
                                             .padding()
                                             .scaleEffect(1.5)
@@ -352,7 +348,7 @@ struct HomeView: View {
                             }.frame(maxWidth: .infinity, maxHeight: .infinity)
                         }.frame(maxWidth: .infinity)
                         
-                        // MARK: - Recipes
+                        // MARK: - Shopping list
                         
                         ZStack {
                             Rectangle()
@@ -361,51 +357,15 @@ struct HomeView: View {
                             
                             VStack(spacing: 10) {
                                 HStack {
-                                    Image(systemName: "book")
+                                    Image(systemName: "cart")
                                         .foregroundColor(Color("AccentColor"))
                                     
-                                    Text("Recipes")
+                                    Text("Shopping list")
                                         .foregroundColor(Color("Font"))
                                 }
                                 
                                 Divider()
                                     .padding(.horizontal)
-                                
-                                TabView(selection: $index) {
-                                    VStack {
-                                        Text("Rizek")
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Font"))
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        
-                                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit...")
-                                            .font(.footnote)
-                                            .foregroundColor(Color("Font"))
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        
-                                        Text("Swipe for more ->")
-                                            .font(.footnote)
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(.secondary)
-                                            .padding(.top, 22)
-                                    }.frame(maxHeight: .infinity, alignment: .top)
-                                        .padding(.horizontal)
-                                        .tag(0)
-                                    
-                                    VStack {
-                                        Text("Rizek")
-                                            .fontWeight(.semibold)
-                                            .foregroundColor(Color("Font"))
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                        
-                                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit...")
-                                            .font(.footnote)
-                                            .foregroundColor(Color("Font"))
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                    }.frame(maxHeight: .infinity, alignment: .top)
-                                        .padding(.horizontal)
-                                        .tag(1)
-                                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                             }.frame(maxHeight: .infinity, alignment: .top)
                                 .padding(.top)
                         }.frame(maxWidth: .infinity)

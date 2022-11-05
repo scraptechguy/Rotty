@@ -33,12 +33,12 @@ class ContentModel: ObservableObject {
     
     func checkLevel() {
         
-        if points > 999 {
+        if points > 699 {
          
             currentLevel = 8
             isLevel7 = false
             isLevel8 = true
-            goal = 1000
+            goal = 800
             
             
         } else if points > 599 {

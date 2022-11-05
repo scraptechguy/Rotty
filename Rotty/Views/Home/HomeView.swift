@@ -240,7 +240,7 @@ struct HomeView: View {
                             HStack {
                                 VStack {
                                     Gauge(value: 23, in: 0...100) {
-                                        Text("\(Int(model.points / model.goal) * 100) %")
+                                        Text(String(model.points))
                                     }.gaugeStyle(.accessoryCircularCapacity)
                                         .frame(width: 50, height: 50)
                                         .tint(.white)

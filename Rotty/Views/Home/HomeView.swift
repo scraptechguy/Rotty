@@ -238,7 +238,7 @@ struct HomeView: View {
                                         .frame(width: 50, height: 50)
                                         .tint(.white)
                                     
-                                    Text("2 364 points\nto the next level")
+                                    Text("\(model.points) points\nto the next level")
                                         .font(.footnote)
                                         .multilineTextAlignment(.center)
                                 }
@@ -411,6 +411,44 @@ struct HomeView: View {
                        
                         Text("to onboarding")
                             .foregroundColor(.secondary)
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        HStack(spacing: 0) {
+                            Button(action: {
+                                withAnimation {
+                                    model.points += 100
+                                }
+                            }, label: {
+                                Text("Add ")
+                            })
+                            
+                            Text("100 points")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Spacer()
+                       
+                        HStack(spacing: 0) {
+                            Button(action: {
+                                withAnimation {
+                                    if model.points > 0 {
+                                        
+                                        model.points -= 100
+                                        
+                                    }
+                                }
+                            }, label: {
+                                Text("Remove ")
+                            })
+                            
+                            Text("100 points")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Spacer()
                     }
                 }
             }.refreshable {

@@ -240,12 +240,12 @@ struct HomeView: View {
                             HStack {
                                 VStack {
                                     Gauge(value: 23, in: 0...100) {
-                                        Text("23 %")
+                                        Text("\(Int(model.points / model.goal) * 100) %")
                                     }.gaugeStyle(.accessoryCircularCapacity)
                                         .frame(width: 50, height: 50)
                                         .tint(.white)
                                     
-                                    Text("\(model.points) points\nto the next level")
+                                    Text("\(model.goal - model.points) points\nto the next level")
                                         .font(.footnote)
                                         .multilineTextAlignment(.center)
                                 }
@@ -426,14 +426,14 @@ struct HomeView: View {
                         HStack(spacing: 0) {
                             Button(action: {
                                 withAnimation {
-                                    model.points += 100
+                                    model.points += 25
                                     model.checkLevel()
                                 }
                             }, label: {
                                 Text("Add ")
                             })
                             
-                            Text("100 points")
+                            Text("25 points")
                                 .foregroundColor(.secondary)
                         }
                         
@@ -444,7 +444,7 @@ struct HomeView: View {
                                 withAnimation {
                                     if model.points > 0 {
                                         
-                                        model.points -= 100
+                                        model.points -= 25
                                         model.checkLevel()
                                         
                                     }
@@ -453,7 +453,7 @@ struct HomeView: View {
                                 Text("Remove ")
                             })
                             
-                            Text("100 points")
+                            Text("25 points")
                                 .foregroundColor(.secondary)
                         }
                         

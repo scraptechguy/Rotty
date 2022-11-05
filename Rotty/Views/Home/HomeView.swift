@@ -87,7 +87,7 @@ struct HomeView: View {
                                     .font(.headline)
                             })
                             
-                            Text(" Lvl. 6")
+                            Text(" Lvl. \(model.currentLevel)")
                                 .foregroundColor(Color("Font"))
                         }
                     }.opacity(showViews[0] ? 1 : 0)
@@ -420,6 +420,7 @@ struct HomeView: View {
                             Button(action: {
                                 withAnimation {
                                     model.points += 100
+                                    model.checkLevel()
                                 }
                             }, label: {
                                 Text("Add ")
@@ -437,6 +438,7 @@ struct HomeView: View {
                                     if model.points > 0 {
                                         
                                         model.points -= 100
+                                        model.checkLevel()
                                         
                                     }
                                 }
@@ -463,11 +465,14 @@ struct HomeView: View {
                     showViews[7] = false
                 }
                 
+                model.checkLevel()
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     animateViews()
                 }
             }
         }.onAppear(perform: animateViews)
+            .onAppear(perform: model.checkLevel)
             .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     

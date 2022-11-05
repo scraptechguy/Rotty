@@ -400,6 +400,8 @@ struct HomeView: View {
                             .foregroundColor(Color("AccentColor"))
                     }.padding(.top, 30)
                     
+                    // MARK: - Debug
+                    
                     Text("DEBUG")
                         .font(.footnote)
                         .fontWeight(.bold)
@@ -482,6 +484,8 @@ struct HomeView: View {
             .onAppear(perform: model.checkLevel)
             .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
+    
+    // MARK: - animateViews()
     
     func animateViews() {
         withAnimation(.easeInOut) {

@@ -30,6 +30,9 @@ struct MissionsView: View {
                 .ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
+                
+                // MARK: - Level 1
+                
                 if model.currentLevel >= 1 {
                     
                     HStack {
@@ -86,6 +89,8 @@ struct MissionsView: View {
                     
                 }
                 
+                // MARK: - Level 2
+                
                 if model.currentLevel >= 2 {
                     
                     HStack {
@@ -140,6 +145,8 @@ struct MissionsView: View {
                         .offset(y: showViews[1] ? 0 : 200)
                     
                 }
+                
+                // MARK: - Level 3
                 
                 if model.currentLevel >= 3 {
                     
@@ -196,6 +203,8 @@ struct MissionsView: View {
                     
                 }
                 
+                // MARK: - Level 4
+                
                 if model.currentLevel >= 4 {
                     HStack {
                         Image(systemName: model.isLevel4 ? "ellipsis" : "checkmark")
@@ -249,6 +258,8 @@ struct MissionsView: View {
                         .offset(y: showViews[3] ? 0 : 200)
                     
                 }
+                
+                // MARK: - Level 5
                 
                 if model.currentLevel >= 5 {
                     
@@ -305,6 +316,8 @@ struct MissionsView: View {
                     
                 }
                 
+                // MARK: - Level 6
+                
                 if model.currentLevel >= 6 {
                     
                     HStack {
@@ -360,6 +373,8 @@ struct MissionsView: View {
                     
                 }
                 
+                // MARK: - Level 7
+                
                 if model.currentLevel >= 7 {
                     
                     HStack {
@@ -414,6 +429,8 @@ struct MissionsView: View {
                         .offset(y: showViews[6] ? 0 : 200)
                     
                 }
+                
+                // MARK: - Level 8
                 
                 if model.currentLevel == 8 {
                     
@@ -472,6 +489,8 @@ struct MissionsView: View {
             }.padding(.top, 62)
                 .onAppear(perform: animateViews)
             
+            // MARK: - x button and heading
+            
             HStack {
                 Spacer()
                 
@@ -504,6 +523,8 @@ struct MissionsView: View {
                 .padding(.leading, 15)
         }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
+    
+    // MARK: - animateViews()
     
     func animateViews() {
         withAnimation(.easeInOut) {

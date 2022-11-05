@@ -387,7 +387,9 @@ struct HomeView: View {
                     
                     HStack(spacing: 0) {
                         Button(action: {
-                            model.onboardingShown = false
+                            withAnimation {
+                                model.onboardingShown = false
+                            }
                         }, label: {
                             Text("Go back ")
                         })

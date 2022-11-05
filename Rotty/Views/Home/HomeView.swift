@@ -422,26 +422,30 @@ struct HomeView: View {
                             .foregroundColor(.secondary)
                     }
                     
-                    HStack {
-                        Spacer()
+                    VStack(spacing: 0) {
+                        Text("Points")
+                            .foregroundColor(Color("AccentColor"))
                         
-                        HStack(spacing: 0) {
+                        HStack {
+                            Spacer()
+                            
                             Button(action: {
                                 withAnimation {
                                     model.points += 25
                                     model.checkLevel()
                                 }
                             }, label: {
-                                Text("Add ")
+                                Image(systemName: "plus")
+                                    .foregroundColor(.white)
+                                    .frame(width: 30, height: 30)
+                                    .background {
+                                        Circle()
+                                            .fill(Color("AccentColor"))
+                                    }
                             })
                             
-                            Text("25 points")
-                                .foregroundColor(.secondary)
-                        }
-                        
-                        Spacer()
-                       
-                        HStack(spacing: 0) {
+                            Spacer()
+                            
                             Button(action: {
                                 withAnimation {
                                     if model.points > 0 {
@@ -452,14 +456,17 @@ struct HomeView: View {
                                     }
                                 }
                             }, label: {
-                                Text("Remove ")
+                                Image(systemName: "minus")
+                                    .foregroundColor(.white)
+                                    .frame(width: 30, height: 30)
+                                    .background {
+                                        Circle()
+                                            .fill(Color("AccentColor"))
+                                    }
                             })
                             
-                            Text("25 points")
-                                .foregroundColor(.secondary)
+                            Spacer()
                         }
-                        
-                        Spacer()
                     }
                 }
             }.refreshable {

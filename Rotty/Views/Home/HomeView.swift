@@ -241,6 +241,7 @@ struct HomeView: View {
                                 VStack {
                                     Gauge(value: 23, in: 0...100) {
                                         Text(String(model.points))
+                                            .font(.subheadline)
                                     }.gaugeStyle(.accessoryCircularCapacity)
                                         .frame(width: 50, height: 50)
                                         .tint(.white)
@@ -431,11 +432,15 @@ struct HomeView: View {
                             
                             Button(action: {
                                 withAnimation {
-                                    model.points += 25
-                                    model.checkLevel()
+                                    if model.points > 0 {
+                                        
+                                        model.points -= 25
+                                        model.checkLevel()
+                                        
+                                    }
                                 }
                             }, label: {
-                                Image(systemName: "plus")
+                                Image(systemName: "minus")
                                     .foregroundColor(.white)
                                     .frame(width: 30, height: 30)
                                     .background {
@@ -448,15 +453,11 @@ struct HomeView: View {
                             
                             Button(action: {
                                 withAnimation {
-                                    if model.points > 0 {
-                                        
-                                        model.points -= 25
-                                        model.checkLevel()
-                                        
-                                    }
+                                    model.points += 25
+                                    model.checkLevel()
                                 }
                             }, label: {
-                                Image(systemName: "minus")
+                                Image(systemName: "plus")
                                     .foregroundColor(.white)
                                     .frame(width: 30, height: 30)
                                     .background {

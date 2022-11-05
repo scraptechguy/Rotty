@@ -386,6 +386,21 @@ struct HomeView: View {
                         .padding(.horizontal)
                     
                     HStack(spacing: 0) {
+                         Text("Version ")
+                            .foregroundColor(.secondary)
+                        
+                        Text("1.0.0")
+                            .foregroundColor(Color("AccentColor"))
+                    }.padding(.top, 30)
+                    
+                    Text("DEBUG")
+                        .font(.footnote)
+                        .fontWeight(.bold)
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading)
+                    
+                    HStack(spacing: 0) {
                         Button(action: {
                             withAnimation {
                                 model.onboardingShown = false
@@ -396,14 +411,6 @@ struct HomeView: View {
                        
                         Text("to onboarding")
                             .foregroundColor(.secondary)
-                    }
-                    
-                    HStack(spacing: 0) {
-                         Text("Version ")
-                            .foregroundColor(.secondary)
-                        
-                        Text("1.0.0")
-                            .foregroundColor(Color("AccentColor"))
                     }
                 }
             }.refreshable {

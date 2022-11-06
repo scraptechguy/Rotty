@@ -70,6 +70,10 @@
 "buttonsThemeDark" = "Dark";
 "buttonsThemeLight" = "Light";
 
+"recipesHeading" = "Recipes";
+
+"listHeading" = "Shopping list";
+
 // MARK: - Help view
 
 "helpViewButton" = "Got it";

@@ -70,6 +70,10 @@
 "buttonsThemeDark" = "Tmavý";
 "buttonsThemeLight" = "Světlý";
 
+"recipesHeading" = "Recepty";
+
+"listHeading" = "Nákupní seznam";
+
 // MARK: - Help view
 
 "helpViewButton" = "Jasný!";

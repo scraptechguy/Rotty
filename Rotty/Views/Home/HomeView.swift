@@ -35,6 +35,10 @@ struct HomeView: View {
     let levelHeading: LocalizedStringKey = "levelHeading"
     let levelText: LocalizedStringKey = "levelText"
     
+    let recipesHeading: LocalizedStringKey = "recipesHeading"
+
+    let listHeading: LocalizedStringKey = "listHeading"
+    
     let buttonsCamera: LocalizedStringKey = "buttonsCamera"
     let buttonsThemeDark: LocalizedStringKey = "buttonsThemeDark"
     let buttonsThemeLight: LocalizedStringKey = "buttonsThemeLight"
@@ -137,7 +141,9 @@ struct HomeView: View {
                                     .font(.footnote)
                                     .foregroundColor(Color("Font"))
                                     .multilineTextAlignment(.center)
-                            }.padding(.horizontal)
+                            }.frame(maxHeight: .infinity, alignment: .top)
+                                .padding(.top)
+                                .padding(.horizontal)
                         }.frame(maxWidth: .infinity)
                             .opacity(showViews[1] ? 1 : 0)
                                 .offset(y: showViews[1] ? 0 : 230)
@@ -292,7 +298,7 @@ struct HomeView: View {
                                     )
                                 
                                 VStack {
-                                    Text("Recipes")
+                                    Text(recipesHeading)
                                         .font(.headline)
                                         .foregroundColor(.white)
                                     
@@ -360,12 +366,48 @@ struct HomeView: View {
                                     Image(systemName: "cart")
                                         .foregroundColor(Color("AccentColor"))
                                     
-                                    Text("Shopping list")
+                                    Text(listHeading)
                                         .foregroundColor(Color("Font"))
                                 }
                                 
                                 Divider()
                                     .padding(.horizontal)
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(Color("AccentColor"))
+                                        .frame(width: 5, height: 5)
+                                        .padding(5)
+                                        .background {
+                                            RoundedRectangle(cornerRadius: 30)
+                                                .stroke(Color("AccentColor"), lineWidth: 1)
+                                        }
+                                    
+                                    Text("Kinder bueno")
+                                        .font(.footnote)
+                                        .foregroundColor(Color("Font"))
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading)
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(Color("AccentColor"))
+                                        .frame(width: 5, height: 5)
+                                        .padding(5)
+                                        .background {
+                                            RoundedRectangle(cornerRadius: 30)
+                                                .stroke(Color("AccentColor"), lineWidth: 1)
+                                        }
+                                    
+                                    Text("Tiger")
+                                        .font(.footnote)
+                                        .foregroundColor(Color("Font"))
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading)
                             }.frame(maxHeight: .infinity, alignment: .top)
                                 .padding(.top)
                         }.frame(maxWidth: .infinity)

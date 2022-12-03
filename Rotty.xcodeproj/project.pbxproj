@@ -21,6 +21,7 @@
 		90A80FCD28E6128000496AD2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A80FCC28E6128000496AD2 /* Camera.swift */; };
 		90CBA952290D20A3008FAA72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90CBA954290D20A3008FAA72 /* Localizable.strings */; };
 		90D9B9B7293B5F8E00804A8D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9B6293B5F8E00804A8D /* NavigationBar.swift */; };
+		90D9B9B9293B6ADA00804A8D /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9B8293B6ADA00804A8D /* OverviewView.swift */; };
 		90F975C228F208F200E45F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F975C128F208F200E45F3A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		90CBA953290D20A3008FAA72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90CBA955290D20A6008FAA72 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90D9B9B6293B5F8E00804A8D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		90D9B9B8293B6ADA00804A8D /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		90F975C128F208F200E45F3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			children = (
 				90A80FC828E43A4100496AD2 /* HomeView.swift */,
 				90D9B9B6293B5F8E00804A8D /* NavigationBar.swift */,
+				90D9B9B8293B6ADA00804A8D /* OverviewView.swift */,
 				9086C424290D082B00DDF14B /* MissionsView.swift */,
 				90A80FCC28E6128000496AD2 /* Camera.swift */,
 				90301106290ADC820026E714 /* Map.swift */,
@@ -221,6 +224,7 @@
 				90301109290C17450026E714 /* HelpView.swift in Sources */,
 				90D9B9B7293B5F8E00804A8D /* NavigationBar.swift in Sources */,
 				903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */,
+				90D9B9B9293B6ADA00804A8D /* OverviewView.swift in Sources */,
 				90A80FCB28E43A5000496AD2 /* OnboardingView.swift in Sources */,
 				9086C425290D082C00DDF14B /* MissionsView.swift in Sources */,
 				90301107290ADC820026E714 /* Map.swift in Sources */,

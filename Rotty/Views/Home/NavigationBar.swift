@@ -121,7 +121,8 @@ struct NavigationBar: View {
                 }.frame(width: screenSize.width, height: screenSize.height / 10)
                     .background {
                         Rectangle()
-                            .fill(Color("Background"))
+                            .fill(Color.clear)
+                            .overlay(.ultraThinMaterial)
                     }
             }.ignoresSafeArea()
         }

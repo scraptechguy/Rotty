@@ -19,6 +19,8 @@ struct NavigationBar: View {
                 Spacer()
                 
                 HStack {
+                    Divider()
+                    
                     Spacer()
                     
                     Group {

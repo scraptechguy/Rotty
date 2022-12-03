@@ -12,6 +12,8 @@ class ContentModel: ObservableObject {
     
     // MARK: State vars
     
+    @Published var viewShown = 1
+    
     @AppStorage("onboardingShown") var onboardingShown = false
     @AppStorage("isDarkMode") var isDarkMode = false
     @AppStorage("showingHelpView") var showingHelpView = false

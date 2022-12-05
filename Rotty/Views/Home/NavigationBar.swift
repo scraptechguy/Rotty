@@ -15,10 +15,15 @@ struct NavigationBar: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(spacing: 0) {
                 Spacer()
                 
-                HStack {
+                Rectangle()
+                    .fill(Color.black)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 2)
+                
+                HStack(alignment: .top) {
                     Divider()
                     
                     Spacer()
@@ -38,7 +43,7 @@ struct NavigationBar: View {
                                             
                                             Text("Lists")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.footnote.bold())
                                         } else {
                                             Image(systemName: "list.bullet.circle")
                                                 .resizable()
@@ -70,7 +75,7 @@ struct NavigationBar: View {
                                             
                                             Text("Overview")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.footnote.bold())
                                         } else {
                                             Image(systemName: "house")
                                                 .resizable()
@@ -102,7 +107,7 @@ struct NavigationBar: View {
                                             
                                             Text("Map")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.footnote.bold())
                                         } else {
                                             Image(systemName: "map")
                                                 .resizable()
@@ -118,11 +123,11 @@ struct NavigationBar: View {
                     }
                     
                     Spacer()
-                }.frame(width: screenSize.width, height: screenSize.height / 10)
+                }.frame(width: screenSize.width, height: screenSize.height / 11)
+                    .padding(.top)
                     .background {
                         Rectangle()
-                            .fill(Color.clear)
-                            .overlay(.ultraThinMaterial)
+                            .fill(Color("Background"))
                     }
             }.ignoresSafeArea()
         }

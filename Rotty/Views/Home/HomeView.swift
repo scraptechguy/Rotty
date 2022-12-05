@@ -18,8 +18,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             TabView(selection: $model.viewShown) {
-                Map().tag(0)
-                    .ignoresSafeArea()
+                ListsView().tag(0)
                 
                 OverviewView().tag(1)
                 

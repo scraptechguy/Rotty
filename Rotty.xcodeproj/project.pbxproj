@@ -23,6 +23,7 @@
 		90D9B9B7293B5F8E00804A8D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9B6293B5F8E00804A8D /* NavigationBar.swift */; };
 		90D9B9B9293B6ADA00804A8D /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9B8293B6ADA00804A8D /* OverviewView.swift */; };
 		90D9B9BE293B9C7800804A8D /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9BD293B9C7800804A8D /* ListsView.swift */; };
+		90D9B9C1293E500E00804A8D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9C0293E500E00804A8D /* ToDoItem.swift */; };
 		90F975C228F208F200E45F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F975C128F208F200E45F3A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		90D9B9B6293B5F8E00804A8D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		90D9B9B8293B6ADA00804A8D /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
 		90D9B9BD293B9C7800804A8D /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
+		90D9B9C0293E500E00804A8D /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		90F975C128F208F200E45F3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 			children = (
 				908EB9F028E4361C00952E1E /* RottyApp.swift */,
 				90CBA94F290D2070008FAA72 /* Localization files */,
+				90D9B9BF293E4FF200804A8D /* Helpers */,
 				90A80FC328E43A0500496AD2 /* Views */,
 				90A80FC228E439FD00496AD2 /* ViewModels */,
 				908EB9F428E4361E00952E1E /* Assets.xcassets */,
@@ -153,6 +156,14 @@
 				90D9B9BD293B9C7800804A8D /* ListsView.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		90D9B9BF293E4FF200804A8D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				90D9B9C0293E500E00804A8D /* ToDoItem.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			files = (
 				908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */,
 				90D9B9BE293B9C7800804A8D /* ListsView.swift in Sources */,
+				90D9B9C1293E500E00804A8D /* ToDoItem.swift in Sources */,
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,
 				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,

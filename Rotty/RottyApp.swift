@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct RottyApp: App {
+    
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
             LaunchView()
                 .environmentObject(ContentModel())
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

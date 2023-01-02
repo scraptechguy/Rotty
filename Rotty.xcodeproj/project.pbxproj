@@ -26,6 +26,8 @@
 		90D9B9C1293E500E00804A8D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D9B9C0293E500E00804A8D /* ToDoItem.swift */; };
 		90EBDBB72962EA2A001F9FBF /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBB52962EA2A001F9FBF /* FoodModel.xcdatamodeld */; };
 		90EBDBB92962F3C9001F9FBF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBB82962F3C9001F9FBF /* DataController.swift */; };
+		90EBDBBB2962F75F001F9FBF /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */; };
+		90EBDBBD29630893001F9FBF /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBC29630893001F9FBF /* TimeFormatting.swift */; };
 		90F975C228F208F200E45F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F975C128F208F200E45F3A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		90D9B9C0293E500E00804A8D /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		90EBDBB62962EA2A001F9FBF /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 		90EBDBB82962F3C9001F9FBF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
+		90EBDBBC29630893001F9FBF /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		90F975C128F208F200E45F3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				90D9B9BD293B9C7800804A8D /* ListsView.swift */,
+				90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				90D9B9C0293E500E00804A8D /* ToDoItem.swift */,
+				90EBDBBC29630893001F9FBF /* TimeFormatting.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 				9086C425290D082C00DDF14B /* MissionsView.swift in Sources */,
 				90EBDBB92962F3C9001F9FBF /* DataController.swift in Sources */,
 				90301107290ADC820026E714 /* Map.swift in Sources */,
+				90EBDBBB2962F75F001F9FBF /* AddFoodView.swift in Sources */,
 				90A80FC528E43A1300496AD2 /* ContentModel.swift in Sources */,
+				90EBDBBD29630893001F9FBF /* TimeFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

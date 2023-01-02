@@ -46,6 +46,8 @@ class DataController: ObservableObject {
         food.name = name
         food.expiration = expiration
         
+        save(context: context)
+        
     }
     
     func editFood(food: Food, name: String, expiration: Double, context: NSManagedObjectContext) {

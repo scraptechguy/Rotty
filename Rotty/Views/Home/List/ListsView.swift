@@ -6,46 +6,68 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ListsView: View {
+
+    @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
     
-    @State var shoppingList: [String] = ["Kinder maxi king", "Kinder bueno", "Tiger", "Bagetka sunka syr", "Kysele rybicky"]
-    @State var shoppingListDone: [Bool] = Array(repeating: false, count: 5)
-    @State var completed: [String] = ["Rohliky", "Mliko (tvuj otec se s nim vratil)", "Maslo", "Paprika", "Rajcata", "Panev", "Syr", "Sunka"]
-    @State var completedDone: [Bool] = Array(repeating: true, count: 8)
+    @State private var showingAddView = false
     
     var body: some View {
-        ZStack {
-            Color("Background")
-                .ignoresSafeArea()
-            
-            ScrollView(showsIndicators: false) {
-                Text("Shopping lists")
-                    .foregroundColor(Color("Font"))
-                    .font(.title.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading)
-                
-                VStack {
-                    ForEach(shoppingList.indices, id: \.self) { i in
-                        ToDoItem(name: shoppingList[i], done: shoppingListDone[i])
+        NavigationView {
+            VStack(alignment: .leading) {
+                List {
+                    ForEach(food) { food in
+                        NavigationLink(destination: EditFoodView(food: food)) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 6) {
+                                    Text(food.name!)
+                                        .bold()
+                                    
+                                    Text("Expires in  ").foregroundColor(.secondary) + Text("\(Int(food.expiration)) days")
+                                }
+                                
+                                Spacer()
+                                
+                                Text(calculateTimeSince(date: food.date!))
+                                    .foregroundColor(.secondary)
+                                    .italic()
+                            }
+                        }
+                    }.onDelete(perform: deleteFood)
+                }.listStyle(.plain)
+            }.navigationTitle("Rotty")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showingAddView.toggle()
+                        }, label: {
+                            Label("Add Food", systemImage: "plus.circle")
+                        })
                     }
-                }.padding(.bottom)
-                
-                Text("Completed")
-                    .foregroundColor(Color("Font"))
-                    .font(.title.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading)
-                
-                VStack {
-                    ForEach(completed.indices, id: \.self) { i in
-                        ToDoItem(name: completed[i], done: completedDone[i])
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
                     }
-                }.padding(.bottom)
-            }
+                }
+                .sheet(isPresented: $showingAddView) {
+                    AddFoodView()
+                }
         }
     }
+    
+    private func deleteFood(offsets: IndexSet) {
+        
+        withAnimation {
+            offsets.map { food[$0] }.forEach(managedObjContext.delete)
+            
+            DataController().save(context: managedObjContext)
+        }
+        
+    }
+    
 }
 
 struct ListsView_Previews: PreviewProvider {

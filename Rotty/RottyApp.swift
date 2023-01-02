@@ -14,7 +14,7 @@ struct RottyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LaunchView()
+            ListsView()
                 .environmentObject(ContentModel())
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }

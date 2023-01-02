@@ -28,6 +28,7 @@
 		90EBDBB92962F3C9001F9FBF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBB82962F3C9001F9FBF /* DataController.swift */; };
 		90EBDBBB2962F75F001F9FBF /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */; };
 		90EBDBBD29630893001F9FBF /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBC29630893001F9FBF /* TimeFormatting.swift */; };
+		90EBDBBF296313BD001F9FBF /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBE296313BD001F9FBF /* EditFoodView.swift */; };
 		90F975C228F208F200E45F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F975C128F208F200E45F3A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		90EBDBB82962F3C9001F9FBF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		90EBDBBC29630893001F9FBF /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		90EBDBBE296313BD001F9FBF /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		90F975C128F208F200E45F3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 			children = (
 				90D9B9BD293B9C7800804A8D /* ListsView.swift */,
 				90EBDBBA2962F75F001F9FBF /* AddFoodView.swift */,
+				90EBDBBE296313BD001F9FBF /* EditFoodView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				90A80FCD28E6128000496AD2 /* Camera.swift in Sources */,
 				90A80FC128E4372800496AD2 /* LaunchView.swift in Sources */,
 				90301109290C17450026E714 /* HelpView.swift in Sources */,
+				90EBDBBF296313BD001F9FBF /* EditFoodView.swift in Sources */,
 				90D9B9B7293B5F8E00804A8D /* NavigationBar.swift in Sources */,
 				90EBDBB72962EA2A001F9FBF /* FoodModel.xcdatamodeld in Sources */,
 				903010FE290A61ED0026E714 /* OnboardingModel.swift in Sources */,

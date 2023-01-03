@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @EnvironmentObject var model: ContentModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                Section(header: Text("General").foregroundColor(.secondary)) {
+                    Toggle(isOn: $model.isDarkMode) {
+                        Label("Light mode", systemImage: model.isDarkMode ? "sun.max.fill" : "sun.min")
+                    }
+                    
+                    HStack {
+                        Label("App language", systemImage: "character.book.closed")
+                        
+                        Spacer()
+                        
+                        Text("English")
+                            .foregroundColor(.secondary)
+                        
+                        Image(systemName: "arrow.up.right")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                    }.onTapGesture {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            if UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    }
+                }
+            }.navigationTitle("Settings")
+        }
     }
 }
 

@@ -33,21 +33,21 @@ struct NavigationBar: View {
                                         if model.viewShown == 0 {
                                             Image(systemName: "books.vertical")
                                                 .resizable()
-                                                .frame(width: 24, height: 22)
+                                                .frame(width: 22, height: 20)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Lists")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         } else {
                                             Image(systemName: "books.vertical")
                                                 .resizable()
-                                                .frame(width: 24, height: 22)
+                                                .frame(width: 22, height: 20)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Lists")
                                                 .foregroundColor(.secondary)
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         }
                                     }
                         })
@@ -63,21 +63,21 @@ struct NavigationBar: View {
                                         if model.viewShown == 1 {
                                             Image(systemName: "lines.measurement.horizontal")
                                                 .resizable()
-                                                .frame(width: 22, height: 22)
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Overview")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         } else {
                                             Image(systemName: "lines.measurement.horizontal")
                                                 .resizable()
-                                                .frame(width: 22, height: 22)
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Overview")
                                                 .foregroundColor(.secondary)
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         }
                                     }
                         })
@@ -93,21 +93,21 @@ struct NavigationBar: View {
                                         if model.viewShown == 2 {
                                             Image(systemName: "book")
                                                 .resizable()
-                                                .frame(width: 26, height: 22)
+                                                .frame(width: 24, height: 20)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Learn")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         } else {
                                             Image(systemName: "book")
                                                 .resizable()
-                                                .frame(width: 26, height: 22)
+                                                .frame(width: 24, height: 20)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Learn")
                                                 .foregroundColor(.secondary)
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         }
                                     }
                         })
@@ -123,28 +123,29 @@ struct NavigationBar: View {
                                         if model.viewShown == 3 {
                                             Image(systemName: "gear")
                                                 .resizable()
-                                                .frame(width: 22, height: 22)
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Settings")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         } else {
                                             Image(systemName: "gear")
                                                 .resizable()
-                                                .frame(width: 22, height: 22)
+                                                .frame(width: 20, height: 20)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Settings")
                                                 .foregroundColor(.secondary)
-                                                .font(.footnote)
+                                                .font(.system(size: 12))
                                         }
                                     }
                         })
                     }
                     
                     Spacer()
-                }.frame(width: screenSize.width, height: screenSize.height / 11.5)
+                }.frame(height: screenSize.height / 11.5)
+                    .frame(maxWidth: .infinity)
                     .padding(.top)
                     .background {
                         Rectangle()

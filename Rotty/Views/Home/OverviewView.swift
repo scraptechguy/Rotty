@@ -104,8 +104,7 @@ struct OverviewView: View {
                 }
             }.onAppear(perform: animateViews)
                 .onAppear(perform: model.checkLevel)
-                .preferredColorScheme(model.isDarkMode ? .dark : .light)
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
     // MARK: - animateViews()

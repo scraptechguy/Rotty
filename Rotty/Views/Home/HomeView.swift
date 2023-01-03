@@ -22,9 +22,9 @@ struct HomeView: View {
                 
                 OverviewView().tag(1)
                 
-                Text("Learn").tag(2)
+                LearnView().tag(2)
                 
-                Text("Settings").tag(3)
+                SettingsView().tag(3)
             }
             
             NavigationBar()

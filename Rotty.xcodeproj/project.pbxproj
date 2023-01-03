@@ -30,6 +30,7 @@
 		90EBDBBD29630893001F9FBF /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBC29630893001F9FBF /* TimeFormatting.swift */; };
 		90EBDBBF296313BD001F9FBF /* EditFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBBE296313BD001F9FBF /* EditFoodView.swift */; };
 		90EBDBC129647EDD001F9FBF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBC029647EDD001F9FBF /* SettingsView.swift */; };
+		90EBDBC329647EF8001F9FBF /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EBDBC229647EF8001F9FBF /* LearnView.swift */; };
 		90F975C228F208F200E45F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F975C128F208F200E45F3A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		90EBDBBC29630893001F9FBF /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		90EBDBBE296313BD001F9FBF /* EditFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodView.swift; sourceTree = "<group>"; };
 		90EBDBC029647EDD001F9FBF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		90EBDBC229647EF8001F9FBF /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		90F975C128F208F200E45F3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				90D9B9B8293B6ADA00804A8D /* OverviewView.swift */,
 				90EBDBC029647EDD001F9FBF /* SettingsView.swift */,
 				9086C424290D082B00DDF14B /* MissionsView.swift */,
+				90EBDBC229647EF8001F9FBF /* LearnView.swift */,
 				90A80FCC28E6128000496AD2 /* Camera.swift */,
 				90301106290ADC820026E714 /* Map.swift */,
 				90D9B9BC293B9C3200804A8D /* List */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				908EB9F128E4361C00952E1E /* RottyApp.swift in Sources */,
+				90EBDBC329647EF8001F9FBF /* LearnView.swift in Sources */,
 				90D9B9BE293B9C7800804A8D /* ListsView.swift in Sources */,
 				90D9B9C1293E500E00804A8D /* ToDoItem.swift in Sources */,
 				90A80FC928E43A4100496AD2 /* HomeView.swift in Sources */,

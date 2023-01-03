@@ -22,10 +22,10 @@ struct HomeView: View {
                 
                 OverviewView().tag(1)
                 
-                Map().tag(2)
-                    .ignoresSafeArea()
-            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .ignoresSafeArea()
+                Text("Learn").tag(2)
+                
+                Text("Settings").tag(3)
+            }
             
             NavigationBar()
         }

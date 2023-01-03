@@ -18,10 +18,7 @@ struct NavigationBar: View {
             VStack(spacing: 0) {
                 Spacer()
                 
-                Rectangle()
-                    .fill(Color.black)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 2)
+                Divider()
                 
                 HStack(alignment: .top) {
                     Divider()
@@ -30,24 +27,22 @@ struct NavigationBar: View {
                     
                     Group {
                         Button(action: {
-                                    withAnimation {
-                                        model.viewShown = 0
-                                    }
+                                    model.viewShown = 0
                                 }, label: {
                                     VStack {
                                         if model.viewShown == 0 {
-                                            Image(systemName: "list.bullet.circle")
+                                            Image(systemName: "books.vertical")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 24, height: 22)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Lists")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote.bold())
+                                                .font(.footnote)
                                         } else {
-                                            Image(systemName: "list.bullet.circle")
+                                            Image(systemName: "books.vertical")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 24, height: 22)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Lists")
@@ -62,24 +57,22 @@ struct NavigationBar: View {
                     
                     Group {
                         Button(action: {
-                                    withAnimation {
-                                        model.viewShown = 1
-                                    }
+                                    model.viewShown = 1
                                 }, label: {
                                     VStack {
                                         if model.viewShown == 1 {
-                                            Image(systemName: "house")
+                                            Image(systemName: "lines.measurement.horizontal")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 22, height: 22)
                                                 .foregroundColor(Color("AccentColor"))
                                             
                                             Text("Overview")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote.bold())
+                                                .font(.footnote)
                                         } else {
-                                            Image(systemName: "house")
+                                            Image(systemName: "lines.measurement.horizontal")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 22, height: 22)
                                                 .foregroundColor(.secondary)
                                             
                                             Text("Overview")
@@ -94,27 +87,25 @@ struct NavigationBar: View {
                     
                     Group {
                         Button(action: {
-                                    withAnimation {
-                                        model.viewShown = 2
-                                    }
+                                    model.viewShown = 2
                                 }, label: {
                                     VStack {
                                         if model.viewShown == 2 {
-                                            Image(systemName: "map")
+                                            Image(systemName: "book")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 26, height: 22)
                                                 .foregroundColor(Color("AccentColor"))
                                             
-                                            Text("Map")
+                                            Text("Learn")
                                                 .foregroundColor(Color("Font"))
-                                                .font(.footnote.bold())
+                                                .font(.footnote)
                                         } else {
-                                            Image(systemName: "map")
+                                            Image(systemName: "book")
                                                 .resizable()
-                                                .frame(width: 25, height: 25)
+                                                .frame(width: 26, height: 22)
                                                 .foregroundColor(.secondary)
                                             
-                                            Text("Map")
+                                            Text("Learn")
                                                 .foregroundColor(.secondary)
                                                 .font(.footnote)
                                         }
@@ -123,11 +114,41 @@ struct NavigationBar: View {
                     }
                     
                     Spacer()
-                }.frame(width: screenSize.width, height: screenSize.height / 11)
+                    
+                    Group {
+                        Button(action: {
+                                    model.viewShown = 3
+                                }, label: {
+                                    VStack {
+                                        if model.viewShown == 3 {
+                                            Image(systemName: "gear")
+                                                .resizable()
+                                                .frame(width: 22, height: 22)
+                                                .foregroundColor(Color("AccentColor"))
+                                            
+                                            Text("Settings")
+                                                .foregroundColor(Color("Font"))
+                                                .font(.footnote)
+                                        } else {
+                                            Image(systemName: "gear")
+                                                .resizable()
+                                                .frame(width: 22, height: 22)
+                                                .foregroundColor(.secondary)
+                                            
+                                            Text("Settings")
+                                                .foregroundColor(.secondary)
+                                                .font(.footnote)
+                                        }
+                                    }
+                        })
+                    }
+                    
+                    Spacer()
+                }.frame(width: screenSize.width, height: screenSize.height / 11.5)
                     .padding(.top)
                     .background {
                         Rectangle()
-                            .fill(Color("Background"))
+                            .fill(.ultraThinMaterial)
                     }
             }.ignoresSafeArea()
         }

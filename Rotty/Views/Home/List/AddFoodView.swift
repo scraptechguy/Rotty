@@ -20,8 +20,10 @@ struct AddFoodView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Name of your food", text: $name)
-                    .fontWeight(model.fontIsBold ? .bold : .regular)
+                TextField(text: $name) {
+                    Text("Name of your food")
+                        .foregroundColor(model.isHighContrast ? .primary : .secondary)
+                }.fontWeight(model.fontIsBold ? .bold : .regular)
                 
                 VStack {
                     if expiration == 1 {

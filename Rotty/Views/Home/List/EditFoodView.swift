@@ -27,6 +27,7 @@ struct EditFoodView: View {
                         name = food.name!
                         expiration = food.expiration
                     }
+                    .foregroundColor(model.isHighContrast ? .primary : .secondary)
                     .fontWeight(model.fontIsBold ? .bold : .regular)
                 
                 VStack {

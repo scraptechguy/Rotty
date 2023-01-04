@@ -45,11 +45,11 @@ struct NavigationBar: View {
                                             Image(systemName: "books.vertical")
                                                 .resizable()
                                                 .frame(width: 22, height: 20)
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                             
                                             Text("Lists")
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .font(.system(size: 12))
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                         }
@@ -79,11 +79,11 @@ struct NavigationBar: View {
                                             Image(systemName: "lines.measurement.horizontal")
                                                 .resizable()
                                                 .frame(width: 20, height: 20)
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                             
                                             Text("Overview")
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .font(.system(size: 12))
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                         }
@@ -113,11 +113,11 @@ struct NavigationBar: View {
                                             Image(systemName: "book")
                                                 .resizable()
                                                 .frame(width: 24, height: 20)
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                             
                                             Text("Learn")
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .font(.system(size: 12))
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                         }
@@ -147,11 +147,11 @@ struct NavigationBar: View {
                                             Image(systemName: "gear")
                                                 .resizable()
                                                 .frame(width: 20, height: 20)
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                             
                                             Text("Settings")
-                                                .foregroundColor(.secondary)
+                                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                                 .font(.system(size: 12))
                                                 .fontWeight(model.fontIsBold ? .bold : .regular)
                                         }

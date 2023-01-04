@@ -28,13 +28,13 @@ struct ListsView: View {
                                     Text(food.name!)
                                         .bold()
                                     
-                                    Text("Expires in  ").foregroundColor(.secondary).fontWeight(model.fontIsBold ? .bold : .regular) + Text("\(Int(food.expiration)) days").fontWeight(model.fontIsBold ? .bold : .regular)
+                                    Text("Expires in ").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular) + Text("\(Int(food.expiration)) days").fontWeight(model.fontIsBold ? .bold : .regular)
                                 }
                                 
                                 Spacer()
                                 
                                 Text(calculateTimeSince(date: food.date!))
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(model.isHighContrast ? .primary : .secondary)
                                     .italic()
                                     .fontWeight(model.fontIsBold ? .bold : .regular)
                             }

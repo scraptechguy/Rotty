@@ -12,6 +12,8 @@ struct EditFoodView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismiss
     
+    @EnvironmentObject var model: ContentModel
+    
     var food: FetchedResults<Food>.Element
     
     @State private var name = ""
@@ -25,12 +27,15 @@ struct EditFoodView: View {
                         name = food.name!
                         expiration = food.expiration
                     }
+                    .fontWeight(model.fontIsBold ? .bold : .regular)
                 
                 VStack {
                     if expiration == 1 {
                         Text("The food expires in \(Int(expiration)) day")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     } else {
                         Text("The food expires in \(Int(expiration)) days")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                     
                     Slider(value: $expiration, in: 1...30)

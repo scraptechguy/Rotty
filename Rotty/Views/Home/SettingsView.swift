@@ -14,26 +14,31 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("General").foregroundColor(.secondary)) {
+                Section(header: Text("General").foregroundColor(.secondary).fontWeight(model.fontIsBold ? .bold : .regular)) {
                     Toggle(isOn: $model.isDarkMode) {
                         Label("Dark mode", systemImage: model.isDarkMode ? "sun.max.fill" : "sun.min")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                     
                     Toggle(isOn: $model.fontIsBold) {
-                        Label("Bold font", systemImage: model.fontIsBold ? "bold" : "character")
+                        Label("Bold font", systemImage: "character")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                     
                     HStack {
                         Label("App language", systemImage: "character.book.closed")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                         
                         Spacer()
                         
                         Text("English")
                             .foregroundColor(.secondary)
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                         
                         Image(systemName: "arrow.up.right")
                             .font(.footnote)
                             .foregroundColor(.gray)
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }.onTapGesture {
                         if let url = URL(string: UIApplication.openSettingsURLString) {
                             if UIApplication.shared.canOpenURL(url) {

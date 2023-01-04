@@ -65,6 +65,7 @@ struct OverviewView: View {
                                             .fill(Color("AccentColor"))
                                     }
                                     .padding(.trailing, 15)
+                                    .fontWeight(model.fontIsBold ? .bold : .regular)
                             }).sheet(isPresented: $model.showingHelpView) {
                                 HelpView()
                                     .presentationDetents([.large])
@@ -87,6 +88,7 @@ struct OverviewView: View {
                         Text("Anička")
                             .font(.title3)
                             .foregroundColor(Color("Font"))
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                         
                         HStack(spacing: 0) {
                             Button(action: {
@@ -94,10 +96,12 @@ struct OverviewView: View {
                             }, label: {
                                 Text(level6)
                                     .font(.headline)
+                                    .fontWeight(model.fontIsBold ? .bold : .regular)
                             })
                             
                             Text(" Lvl. \(model.currentLevel)")
                                 .foregroundColor(Color("Font"))
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
                         }
                     }.opacity(showViews[0] ? 1 : 0)
                         .offset(y: showViews[0] ? 0 : 200)

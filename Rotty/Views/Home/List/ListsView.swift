@@ -13,6 +13,8 @@ struct ListsView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
     
+    @EnvironmentObject var model: ContentModel
+    
     @State private var showingAddView = false
     
     var body: some View {
@@ -26,7 +28,7 @@ struct ListsView: View {
                                     Text(food.name!)
                                         .bold()
                                     
-                                    Text("Expires in  ").foregroundColor(.secondary) + Text("\(Int(food.expiration)) days")
+                                    Text("Expires in  ").foregroundColor(.secondary).fontWeight(model.fontIsBold ? .bold : .regular) + Text("\(Int(food.expiration)) days").fontWeight(model.fontIsBold ? .bold : .regular)
                                 }
                                 
                                 Spacer()
@@ -34,6 +36,7 @@ struct ListsView: View {
                                 Text(calculateTimeSince(date: food.date!))
                                     .foregroundColor(.secondary)
                                     .italic()
+                                    .fontWeight(model.fontIsBold ? .bold : .regular)
                             }
                         }
                     }.onDelete(perform: deleteFood)
@@ -45,11 +48,13 @@ struct ListsView: View {
                             showingAddView.toggle()
                         }, label: {
                             Label("Add Food", systemImage: "plus.circle")
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
                         })
                     }
                     
                     ToolbarItem(placement: .navigationBarLeading) {
                         EditButton()
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                 }
                 .sheet(isPresented: $showingAddView) {
@@ -73,5 +78,6 @@ struct ListsView: View {
 struct ListsView_Previews: PreviewProvider {
     static var previews: some View {
         ListsView()
+            .environmentObject(ContentModel())
     }
 }

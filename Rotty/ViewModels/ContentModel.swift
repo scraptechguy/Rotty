@@ -17,6 +17,7 @@ class ContentModel: ObservableObject {
     @AppStorage("onboardingShown") var onboardingShown = false
     @AppStorage("isDarkMode") var isDarkMode = false
     @AppStorage("fontIsBold") var fontIsBold = false
+    @AppStorage("isHighContrast") var isHighContrast = false
     @AppStorage("showingHelpView") var showingHelpView = false
     @AppStorage("showingMissionsView") var showingMissionsView = false
     

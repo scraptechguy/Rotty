@@ -16,7 +16,11 @@ struct SettingsView: View {
             List {
                 Section(header: Text("General").foregroundColor(.secondary)) {
                     Toggle(isOn: $model.isDarkMode) {
-                        Label("Light mode", systemImage: model.isDarkMode ? "sun.max.fill" : "sun.min")
+                        Label("Dark mode", systemImage: model.isDarkMode ? "sun.max.fill" : "sun.min")
+                    }
+                    
+                    Toggle(isOn: $model.fontIsBold) {
+                        Label("Bold font", systemImage: model.fontIsBold ? "bold" : "character")
                     }
                     
                     HStack {

@@ -14,14 +14,9 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("General").foregroundColor(.secondary).fontWeight(model.fontIsBold ? .bold : .regular)) {
+                Section(header: Text("General").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular)) {
                     Toggle(isOn: $model.isDarkMode) {
                         Label("Dark mode", systemImage: model.isDarkMode ? "sun.max.fill" : "sun.min")
-                            .fontWeight(model.fontIsBold ? .bold : .regular)
-                    }
-                    
-                    Toggle(isOn: $model.fontIsBold) {
-                        Label("Bold font", systemImage: "character")
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                     
@@ -32,12 +27,12 @@ struct SettingsView: View {
                         Spacer()
                         
                         Text("English")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(model.isHighContrast ? .primary : .secondary)
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                         
                         Image(systemName: "arrow.up.right")
                             .font(.footnote)
-                            .foregroundColor(.gray)
+                            .foregroundColor(model.isHighContrast ? .primary : .secondary)
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                     }.onTapGesture {
                         if let url = URL(string: UIApplication.openSettingsURLString) {
@@ -45,6 +40,23 @@ struct SettingsView: View {
                                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                             }
                         }
+                    }
+                }
+                
+                Section(header: Text("Accessibility").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular)) {
+                    Toggle(isOn: $model.fontIsBold) {
+                        Label("Bold font", systemImage: "character")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
+                    }
+                    
+                    Toggle(isOn: $model.isHighContrast) {
+                        Label("High contrast", systemImage: model.isHighContrast ? "eye.fill" : "eye")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
+                    }
+                    
+                    NavigationLink(destination: HelpView().navigationBarTitle("Dictation")) {
+                        Label("Dictation", systemImage: "rectangle.3.group.bubble.left")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                 }
             }.navigationTitle("Settings")
@@ -56,5 +68,6 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
             .environmentObject(ContentModel())
+            .preferredColorScheme(.dark)
     }
 }

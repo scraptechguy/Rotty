@@ -74,7 +74,7 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color("ListRowBackground"))
                     
-                    Link(destination: URL(string: "https://github.com/scraptechguy/Peep/blob/main/docs/PRIVACY.md")!) {
+                    Link(destination: URL(string: "https://github.com/scraptechguy/scraptechguy/blob/main/Rotty/PRIVACY.md")!) {
                         HStack {
                             Label {
                                 Text("Privacy Policy")
@@ -92,14 +92,14 @@ struct SettingsView: View {
                         }
                     }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(action: {
-                            UIPasteboard.general.string = "https://github.com/scraptechguy/Peep/blob/main/docs/PRIVACY.md"
+                            UIPasteboard.general.string = "https://github.com/scraptechguy/scraptechguy/blob/main/Rotty/PRIVACY.md"
                         }, label: {
                             Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
                         })
                     }
                     .listRowBackground(Color("ListRowBackground"))
                     
-                    Link(destination: URL(string: "https://github.com/scraptechguy/Peep")!) {
+                    Link(destination: URL(string: "https://github.com/scraptechguy/Rotty")!) {
                         HStack {
                             Label {
                                 Text("GitHub")
@@ -117,14 +117,14 @@ struct SettingsView: View {
                         }
                     }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(action: {
-                            UIPasteboard.general.string = "https://github.com/scraptechguy/Peep"
+                            UIPasteboard.general.string = "https://github.com/scraptechguy/Rotty"
                         }, label: {
                             Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
                         })
                     }
                     .listRowBackground(Color("ListRowBackground"))
                     
-                    Link(destination: URL(string: "https://apps.apple.com/us/app/p%C3%ADp/id6444575713")!) {
+                    Link(destination: URL(string: "https://apps.apple.com/us/app/rotty/id6444080599")!) {
                         HStack {
                             Label {
                                 Text("Write a review")
@@ -147,7 +147,7 @@ struct SettingsView: View {
                         }
                     }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(action: {
-                            UIPasteboard.general.string = "https://apps.apple.com/us/app/p%C3%ADp/id6444575713"
+                            UIPasteboard.general.string = "https://apps.apple.com/us/app/rotty/id6444080599"
                         }, label: {
                             Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
                         })

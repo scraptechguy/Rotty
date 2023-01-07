@@ -49,7 +49,7 @@ struct SettingsView: View {
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                     }.listRowBackground(Color("ListRowBackground"))
                     
-                    Link(destination: URL(string: "https://astro.troja.mff.cuni.cz/mira/sh/sh.php")!) {
+                    Link(destination: URL(string: "https://github.com/scraptechguy")!) {
                         HStack {
                             Label {
                                 Text("Website")
@@ -67,7 +67,7 @@ struct SettingsView: View {
                         }
                     }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(action: {
-                            UIPasteboard.general.string = "https://astro.troja.mff.cuni.cz/mira/sh/sh.php"
+                            UIPasteboard.general.string = "https://github.com/scraptechguy"
                         }, label: {
                             Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
                         })

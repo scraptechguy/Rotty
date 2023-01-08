@@ -28,7 +28,7 @@ struct HomeView: View {
             }
             
             NavigationBar()
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
 }
 

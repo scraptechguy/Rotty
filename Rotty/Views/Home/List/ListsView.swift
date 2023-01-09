@@ -60,7 +60,7 @@ struct ListsView: View {
                 .sheet(isPresented: $showingAddView) {
                     AddFoodView()
                 }
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
     
     private func deleteFood(offsets: IndexSet) {

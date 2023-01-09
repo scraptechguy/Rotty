@@ -52,7 +52,7 @@ struct AddFoodView: View {
                     Spacer()
                 }
             }
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
 }
 

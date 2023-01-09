@@ -245,7 +245,7 @@ struct SettingsView: View {
                     }).listRowBackground(Color("ListRowBackground"))
                 }
             }.navigationTitle("Settings")
-        }
+        }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
 }
 

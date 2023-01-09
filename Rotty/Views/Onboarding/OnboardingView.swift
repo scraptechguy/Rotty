@@ -125,6 +125,7 @@ struct OnboardingView: View {
                             .animation(.interactiveSpring(response: 0.9, dampingFraction: 0.8, blendDuration: 0.5), value: screenIsLast)
                             .frame(maxWidth: .infinity)
                     }
+                    .preferredColorScheme(model.isDarkMode ? .dark : .light)
             }
             
             NavigationBar()
@@ -167,6 +168,7 @@ struct OnboardingView: View {
         }.frame(maxHeight: .infinity, alignment: .top)
             .padding(.horizontal, 15)
             .padding(.top, 10)
+            .preferredColorScheme(model.isDarkMode ? .dark : .light)
     }
 }
 

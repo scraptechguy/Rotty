@@ -11,6 +11,8 @@ struct VersionView: View {
     
     @EnvironmentObject var model: ContentModel
     
+    let screenSize: CGRect = UIScreen.main.bounds
+    
     var body: some View {
         ZStack {
             VStack {
@@ -38,7 +40,7 @@ struct VersionView: View {
                     .font(.footnote)
                     .fontWeight(model.fontIsBold ? .bold : .regular)
                     .foregroundColor(model.isHighContrast ? .primary : .secondary)
-            }
+            }.padding(.bottom, screenSize.height / 11)
         }
     }
 }

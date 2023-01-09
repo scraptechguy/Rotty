@@ -230,6 +230,11 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color("ListRowBackground"))
                     
+                    NavigationLink(destination: HelpView().navigationBarTitle("Help")) {
+                        Label("About this version", systemImage: "server.rack")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
+                    }.listRowBackground(Color("ListRowBackground"))
+                    
                     Button(action: {
                         withAnimation {
                             model.onboardingShown = false
@@ -237,7 +242,7 @@ struct SettingsView: View {
                     }, label: {
                         Text("Reshow onboarding")
                             .fontWeight(model.fontIsBold ? .bold : .regular)
-                    })
+                    }).listRowBackground(Color("ListRowBackground"))
                 }
             }.navigationTitle("Settings")
         }

@@ -170,6 +170,17 @@ struct SettingsView: View {
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                     }
                 }
+                
+                Section(header: Text("Developer settings").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular), footer: Text("Reshowing onboarding does not result in the loss of your data").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular).padding(.bottom)) {
+                    Button(action: {
+                        withAnimation {
+                            model.onboardingShown = false
+                        }
+                    }, label: {
+                        Text("Reshow onboarding")
+                            .fontWeight(model.fontIsBold ? .bold : .regular)
+                    })
+                }
             }.navigationTitle("Settings")
         }
     }

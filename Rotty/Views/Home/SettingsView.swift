@@ -231,7 +231,7 @@ struct SettingsView: View {
                     .listRowBackground(Color("ListRowBackground"))
                     
                     NavigationLink(destination: VersionView()) {
-                        Label("About this version", systemImage: "server.rack")
+                        Text("About this version")
                             .fontWeight(model.fontIsBold ? .bold : .regular)
                     }.listRowBackground(Color("ListRowBackground"))
                     

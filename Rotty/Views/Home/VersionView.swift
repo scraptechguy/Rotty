@@ -18,11 +18,23 @@ struct VersionView: View {
             VStack {
                 Spacer()
                 
-                Image("RottyAppIconSVG")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .mask(RoundedRectangle(cornerRadius: 20))
-                    .shadow(radius: 50)
+                if model.isDarkMode {
+                    
+                    Image("RottyAppIconSVG")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .mask(RoundedRectangle(cornerRadius: 20))
+                        .shadow(color: .gray, radius: 40)
+                    
+                } else {
+                    
+                    Image("RottyAppIconSVG")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .mask(RoundedRectangle(cornerRadius: 20))
+                        .shadow(radius: 40)
+                    
+                }
                 
                 Spacer()
                 

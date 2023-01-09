@@ -172,6 +172,64 @@ struct SettingsView: View {
                 }
                 
                 Section(header: Text("Developer settings").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular), footer: Text("Reshowing onboarding does not result in the loss of your data").foregroundColor(model.isHighContrast ? .primary : .secondary).fontWeight(model.fontIsBold ? .bold : .regular).padding(.bottom)) {
+                    Link(destination: URL(string: "https://github.com/scraptechguy/Rotty/issues/new?assignees=&labels=&template=bug_report.md&title=")!) {
+                        HStack {
+                            Label {
+                                Text("Report a bug")
+                                    .foregroundColor(.primary)
+                            } icon: {
+                                Image(systemName: "exclamationmark.triangle")
+                            }.fontWeight(model.fontIsBold ? .bold : .regular)
+                            
+                            Spacer()
+                            
+                            Text("GitHub")
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
+                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
+                            
+                            Image(systemName: "arrow.up.right")
+                                .font(.footnote)
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
+                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
+                        }
+                    }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button(action: {
+                            UIPasteboard.general.string = "https://github.com/scraptechguy/Rotty/issues/new?assignees=&labels=&template=bug_report.md&title="
+                        }, label: {
+                            Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
+                        })
+                    }
+                    .listRowBackground(Color("ListRowBackground"))
+                    
+                    Link(destination: URL(string: "https://github.com/scraptechguy/Rotty/issues/new?assignees=&labels=&template=feature_request.md&title=")!) {
+                        HStack {
+                            Label {
+                                Text("Suggest a feature")
+                                    .foregroundColor(.primary)
+                            } icon: {
+                                Image(systemName: "pencil.and.outline")
+                            }.fontWeight(model.fontIsBold ? .bold : .regular)
+                            
+                            Spacer()
+                            
+                            Text("GitHub")
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
+                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
+                            
+                            Image(systemName: "arrow.up.right")
+                                .font(.footnote)
+                                .fontWeight(model.fontIsBold ? .bold : .regular)
+                                .foregroundColor(model.isHighContrast ? .primary : .secondary)
+                        }
+                    }.swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button(action: {
+                            UIPasteboard.general.string = "https://github.com/scraptechguy/Rotty/issues/new?assignees=&labels=&template=feature_request.md&title="
+                        }, label: {
+                            Label("Copy to clipboard", systemImage: "rectangle.on.rectangle")
+                        })
+                    }
+                    .listRowBackground(Color("ListRowBackground"))
+                    
                     Button(action: {
                         withAnimation {
                             model.onboardingShown = false

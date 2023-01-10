@@ -2,6 +2,21 @@
 
 Rotty is currently in active development
 
+<div align="center">
+  <a href="https://github.com/scraptechguy/Rotty/actions">
+    <img src="https://github.com/scraptechguy/Rotty/actions/workflows/ios.yml/badge.svg">
+  </a>
+  <a href="https://github.com/scraptechguy/Rotty/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/scraptechguy/Rotty">
+  </a>
+  <a href="https://github.com/scraptechguy/Rotty/issues">
+    <img src="https://img.shields.io/github/issues/scraptechguy/Rotty">
+  </a>
+  <a href="https://github.com/scraptechguy/Rotty/pulls">
+    <img src="https://img.shields.io/github/issues-pr/scraptechguy/Rotty">
+  </a>
+</div>
+
 ![SampleMockups](https://user-images.githubusercontent.com/75474651/192730267-43100074-9af0-4a22-9499-5880ccfc4452.png)
 
 ### Latest App Store release: 

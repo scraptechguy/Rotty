@@ -41,8 +41,8 @@ struct ListsView: View {
                         }
                     }.onDelete(perform: deleteFood)
                 }.listStyle(.plain)
+                    .preferredColorScheme(model.isDarkMode ? .dark : .light)
             }.navigationTitle("Rotty")
-                .preferredColorScheme(model.isDarkMode ? .dark : .light)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {

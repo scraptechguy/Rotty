@@ -7,8 +7,9 @@
 
 import Foundation
 import SwiftUI
+import AVFoundation
 
-class ContentModel: ObservableObject {
+class ContentModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     
     // MARK: State vars
     
@@ -20,6 +21,119 @@ class ContentModel: ObservableObject {
     @AppStorage("isHighContrast") var isHighContrast = false
     @AppStorage("showingHelpView") var showingHelpView = false
     @AppStorage("showingMissionsView") var showingMissionsView = false
+    
+    // MARK: - Camera
+    
+    @Published var isTaken = false
+    @Published var session = AVCaptureSession()
+    @Published var alert = false
+    @Published var output = AVCapturePhotoOutput()
+    @Published var preview: AVCaptureVideoPreviewLayer!
+    @Published var isSaved = false
+    @Published var picData = Data(count: 0)
+    
+    func checkAuthorization() {
+        
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+         
+            case .authorized:
+                setUpAVSession()
+                return
+            
+            case .notDetermined:
+                AVCaptureDevice.requestAccess(for: .video) { (status) in
+                    if status {
+                        self.setUpAVSession()
+                    }
+                }
+            
+            case .denied:
+                self.alert.toggle()
+                return
+            
+            default:
+                return
+                
+        }
+        
+    }
+    
+    func setUpAVSession() {
+        
+        do {
+            
+            self.session.beginConfiguration()
+            
+            let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+            let input = try AVCaptureDeviceInput(device: device!)
+            
+            if self.session.canAddInput(input) {
+                
+                self.session.addInput(input)
+                
+            }
+            
+            if self.session.canAddOutput(self.output) {
+                
+                self.session.addOutput(self.output)
+                
+            }
+            
+            self.session.commitConfiguration()
+            
+        } catch {
+            
+            print(error.localizedDescription)
+            
+        }
+        
+    }
+    
+    func takePic() {
+        
+        DispatchQueue.global(qos: .background).async {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            self.session.stopRunning()
+        }
+        
+        DispatchQueue.main.async {
+            withAnimation {
+                self.isTaken.toggle()
+            }
+        }
+        
+    }
+    
+    func retakePic() {
+        
+        DispatchQueue.global(qos: .background).async {
+            self.session.startRunning()
+            
+            DispatchQueue.main.async {
+                withAnimation {
+                    self.isTaken.toggle()
+                }
+            }
+        }
+        
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        
+        if error != nil {
+            
+            return
+            
+        }
+        
+        print("picture taken")
+        
+        guard let imageData = photo.fileDataRepresentation() else {return}
+        self.picData = imageData
+        
+    }
+    
+    // MARK: - Check level
     
     @AppStorage("points") var points = 0
     @AppStorage("currentLevel") var currentLevel = 1
@@ -33,7 +147,6 @@ class ContentModel: ObservableObject {
     @AppStorage("isLevel7") var isLevel7 = false
     @AppStorage("isLevel8") var isLevel8 = false
     @AppStorage("goal") var goal = 100
-    
     
     func checkLevel() {
         

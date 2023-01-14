@@ -35,6 +35,8 @@ struct AddListView: View {
                                 }
                             })
                             .onDisappear(perform: {
+                                model.isTaken = false
+                                
                                 DispatchQueue.global(qos: .background).async {
                                     model.session.stopRunning()
                                 }
@@ -329,6 +331,8 @@ struct AddListView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         dismiss()
+                        
+                        model.isTaken = false
                     }, label: {
                         Text("Cancel")
                             .fontWeight(model.fontIsBold ? .bold : .regular)

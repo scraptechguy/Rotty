@@ -38,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		900797882972E5790015D39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		903010FD290A61ED0026E714 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		90301106290ADC820026E714 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		90301108290C17450026E714 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		908EB9EF28E4361C00952E1E /* Rotty */ = {
 			isa = PBXGroup;
 			children = (
+				900797882972E5790015D39D /* Info.plist */,
 				908EB9F028E4361C00952E1E /* RottyApp.swift */,
 				90CBA94F290D2070008FAA72 /* Localization files */,
 				90D9B9BF293E4FF200804A8D /* Helpers */,
@@ -446,8 +448,10 @@
 				DEVELOPMENT_TEAM = NH6Z2BQ4LC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rotty/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Rotty;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Rotty wants to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,8 +487,10 @@
 				DEVELOPMENT_TEAM = NH6Z2BQ4LC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Rotty/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Rotty;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Rotty wants to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

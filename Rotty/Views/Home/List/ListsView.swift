@@ -59,7 +59,7 @@ struct ListsView: View {
                     }
                 }
                 .sheet(isPresented: $showingAddView) {
-                    AddFoodView()
+                    AddListView()
                 }
         }.preferredColorScheme(model.isDarkMode ? .dark : .light)
     }

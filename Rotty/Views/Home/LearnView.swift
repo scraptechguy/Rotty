@@ -243,12 +243,56 @@ struct LearnView: View {
                     }.opacity(showViews[1] ? 1 : 0)
                         .offset(y: showViews[1] ? 0 : 200)
                     
-                    Text("LEARN")
-                        .foregroundColor(.secondary)
+                    Text("Learn")
+                        .font(.title3.bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .top])
                         .opacity(showViews[2] ? 1 : 0)
                         .offset(y: showViews[2] ? 0 : 200)
+                    
+                    HStack {
+                        Image("rotty_coolaf")
+                            .resizable()
+                            .frame(width: 100, height: 120)
+                        
+                        Text("Aperiam explicabo qui omnis. Ut odio consequatur omnis id incidunt. Suscipit minus soluta nostrum.")
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 50)
+                    }.padding()
+                        .opacity(showViews[3] ? 1 : 0)
+                        .offset(y: showViews[3] ? 0 : 200)
+                    
+                    HStack {
+                        Text("Aperiam explicabo qui omnis. Ut odio consequatur omnis id incidunt. Suscipit minus soluta nostrum.")
+                            .multilineTextAlignment(.center)
+                            .padding(.leading, 50)
+                        
+                        Image("rotty_happy")
+                            .resizable()
+                            .frame(width: 100, height: 120)
+                            .padding(.trailing, 30)
+                    }.padding()
+                        .opacity(showViews[4] ? 1 : 0)
+                        .offset(y: showViews[4] ? 0 : 200)
+                    
+                    Map()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 150)
+                        .mask(RoundedRectangle(cornerRadius: 20))
+                        .padding(.horizontal)
+                        .opacity(showViews[5] ? 1 : 0)
+                        .offset(y: showViews[5] ? 0 : 200)
+                    
+                    VStack(spacing: 0) {
+                        Text("Aperiam explicabo qui omnis. Ut odio consequatur omnis id incidunt. Suscipit minus soluta nostrum.")
+                            .multilineTextAlignment(.center)
+                        
+                        Image("rotty_mad")
+                            .resizable()
+                            .frame(width: 100, height: 120)
+                    }.padding()
+                        .opacity(showViews[6] ? 1 : 0)
+                        .offset(y: showViews[6] ? 0 : 200)
                 }
             }.refreshable {
                 withAnimation {

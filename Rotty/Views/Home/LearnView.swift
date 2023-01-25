@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LearnView: View {
+    
+    @State var showViews: [Bool] = Array(repeating: false, count: 8)
     @State private var page = 0
     
     var body: some View {
@@ -44,8 +46,7 @@ struct LearnView: View {
                                 Text("Pencakes are made with eggs")
                                     .lineLimit(1)
                             }.frame(width: 200)
-                        }.padding(.bottom, 50)
-                            .tag(0)
+                        }.tag(0)
                             .onAppear(perform: animatePage)
                         
                         HStack {
@@ -77,8 +78,7 @@ struct LearnView: View {
                                 Text("Apple pie is made with eggs")
                                     .lineLimit(1)
                             }.frame(width: 200)
-                        }.padding(.bottom, 50)
-                            .tag(1)
+                        }.tag(1)
                             .onAppear(perform: animatePage)
                         
                         HStack {
@@ -110,8 +110,7 @@ struct LearnView: View {
                                 Text("Pudding is made with eggs")
                                     .lineLimit(1)
                             }.frame(width: 200)
-                        }.padding(.bottom, 50)
-                            .tag(2)
+                        }.tag(2)
                             .onAppear(perform: animatePage)
                         
                         HStack {
@@ -143,8 +142,7 @@ struct LearnView: View {
                                 Text("Salad is made with eggs")
                                     .lineLimit(1)
                             }.frame(width: 200)
-                        }.padding(.bottom, 50)
-                            .tag(3)
+                        }.tag(3)
                             .onAppear(perform: animatePage)
                         
                         HStack {
@@ -176,14 +174,133 @@ struct LearnView: View {
                                 Text("Toast is made with eggs")
                                     .lineLimit(1)
                             }.frame(width: 200)
-                        }.padding(.bottom, 50)
-                            .tag(4)
+                        }.tag(4)
                             .onAppear(perform: animatePage)
-                    }.tabViewStyle(.page(indexDisplayMode: .always))
+                    }.tabViewStyle(.page(indexDisplayMode: .never))
                         .frame(maxWidth: .infinity)
                         .frame(height: 100)
+                        .opacity(showViews[0] ? 1 : 0)
+                        .offset(y: showViews[0] ? 0 : 200)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Chicken")
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal)
+                                    .background {
+                                        Rectangle()
+                                            .fill(Color("AccentColor"))
+                                            .mask(RoundedRectangle(cornerRadius: 15))
+                                    }
+                            })
+                            
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Potatos")
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal)
+                                    .background {
+                                        Rectangle()
+                                            .fill(Color("AccentColor"))
+                                            .mask(RoundedRectangle(cornerRadius: 15))
+                                    }
+                            })
+                            
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Letuce")
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal)
+                                    .background {
+                                        Rectangle()
+                                            .fill(Color("AccentColor"))
+                                            .mask(RoundedRectangle(cornerRadius: 15))
+                                    }
+                            })
+                            
+                            Button(action: {
+                                
+                            }, label: {
+                                Text("Yoghurt")
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 5)
+                                    .padding(.horizontal)
+                                    .background {
+                                        Rectangle()
+                                            .fill(Color("AccentColor"))
+                                            .mask(RoundedRectangle(cornerRadius: 15))
+                                    }
+                            })
+                        }.padding(.leading)
+                    }.opacity(showViews[1] ? 1 : 0)
+                        .offset(y: showViews[1] ? 0 : 200)
+                    
+                    Text("LEARN")
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading, .top])
+                        .opacity(showViews[2] ? 1 : 0)
+                        .offset(y: showViews[2] ? 0 : 200)
+                }
+            }.refreshable {
+                withAnimation {
+                    showViews[0] = false
+                    showViews[1] = false
+                    showViews[2] = false
+                    showViews[3] = false
+                    showViews[4] = false
+                    showViews[5] = false
+                    showViews[6] = false
+                    showViews[7] = false
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    animateViews()
                 }
             }
+            .onAppear(perform: animateViews)
+        }
+    }
+    
+    func animateViews() {
+        withAnimation(.easeInOut) {
+            showViews[0] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.1)) {
+            showViews[1] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.15)) {
+            showViews[2] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.2)) {
+            showViews[3] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.3)) {
+            showViews[4] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.35)) {
+            showViews[5] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.4)) {
+            showViews[6] = true
+        }
+        
+        withAnimation(.easeInOut.delay(0.45)) {
+            showViews[7] = true
         }
     }
     
@@ -191,7 +308,7 @@ struct LearnView: View {
         
             if page < 4 {
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
                     withAnimation {
                         page += 1
                     }
@@ -199,7 +316,7 @@ struct LearnView: View {
                 
             } else {
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
                     page = 0
                 }
                 
@@ -210,6 +327,7 @@ struct LearnView: View {
 
 struct LearnView_Previews: PreviewProvider {
     static var previews: some View {
-        LearnView().preferredColorScheme(.dark)
+        LearnView()
+            .preferredColorScheme(.light)
     }
 }
